@@ -16,31 +16,37 @@
  <depends>
   <name>AlignToolPlugin</name>
   <url/>
+  <version>0.20</version>
  </depends>
 
  <depends>
   <name>AutoBackupPlugin</name>
   <url/>
- </depends>
+   <version>0.6</version>
+</depends>
 
 <depends>
   <name>LayerShortcutsPlugin</name>
   <url/>
+  <version>0.19</version>
  </depends>
 
  <depends>
   <name>LibraryManagerPlugin</name>
   <url/>
+  <version>0.16</version>
  </depends>
 
 <depends>
   <name>MoveQuicklyToolPlugin</name>
   <url/>
+  <version>0.20</version> 
  </depends>
 
 <depends>
   <name>PinToolPlugin</name>
   <url/>
+  <version>0.4</version>
  </depends>
 
  <authored-time/>
