@@ -1,17 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <salt-grain>
- <name>KLayoutProductivitySuite</name>
+ <name>ProductivityPluginSuite</name>
  <token/>
  <hidden>false</hidden>
  <version>0.1</version>
  <api-version/>
- <title>Meta-Package for IIC KLayout Plugins</title>
- <doc>Utility Python package used by various IIC KLayout Plugins</doc>
+ <title>Productivity Plugin Suite</title>
+ <doc>Meta-Package for all IIC-JKU KLayout Plugins</doc>
  <doc-url>https://github.com/iic-jku/klayout-productivity-suite</doc-url>
  <url/>
  <license>GPLv3</license>
  <author>Martin Jan Köhler</author>
  <author-contact/>
+ 
+ <depends>
+  <name>AlignToolPlugin</name>
+  <url/>
+ </depends>
+
+ <depends>
+  <name>AutoBackupPlugin</name>
+  <url/>
+ </depends>
+
+<depends>
+  <name>LayerShortcutsPlugin</name>
+  <url/>
+ </depends>
+
+ <depends>
+  <name>LibraryManagerPlugin</name>
+  <url/>
+ </depends>
+
+<depends>
+  <name>MoveQuicklyToolPlugin</name>
+  <url/>
+ </depends>
+
+<depends>
+  <name>PinToolPlugin</name>
+  <url/>
+ </depends>
+
  <authored-time/>
  <installed-time></installed-time>
  <icon></icon>
