@@ -4,6 +4,10 @@ pagetitle: "About"
 
 # KLayout Productivity Suite
 
+[![Quarto Publish](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/quarto-publish.yml/badge.svg?branch=main)](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/quarto-publish.yml)
+
+**(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)**
+
 The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
 
 {{< include doc/_plugin_table.qmd >}}
