@@ -1,0 +1,28 @@
+::: {.content-hidden}
+Copyright (C) 2025 Martin Köhler and co-authors (martin.koehler@jku.at)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+:::
+
+The available plugins are listed in the table below.
+
+| Title | Description | Repository URL | Issue tracking |
+|---|---|---|---|
+| Align Tool Plugin | Tool to align layout objects | <https://github.com/iic-jku/klayout-align-tool> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-align-tool/issues) |
+| Automatic Backups | Create automatic backups of edited layouts | <https://github.com/iic-jku/klayout-auto-backup> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-auto-backup/issues) |
+| Layer Shortcuts Plugin | Shortcuts to quickly change layer visibility | <https://github.com/iic-jku/klayout-layer-shortcuts> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-layer-shortcuts/issues) |
+| Library Manager Plugin | Library manager for hierarchical layouts | <https://github.com/iic-jku/klayout-library-manager> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-library-manager/issues) |
+| Move Quickly Tool Plugin | Tool to quickly move layout objects | <https://github.com/iic-jku/klayout-move-tool> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-move-tool/issues) |
+| Pin Tool Plugin | Efficient placement of pins | <https://github.com/iic-jku/klayout-pin-tool> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-pin-tool/issues) |
+| Plugin Utilities Library | Utility library used by various IIC KLayout plugins | <https://github.com/iic-jku/klayout-plugin-utils> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-plugin-utils/issues) |
+

@@ -1,0 +1,69 @@
+---
+title: KLayout Productivity Suite Documentation
+author:
+    - name: Martin Köhler
+      email: martin.koehler@jku.at
+      corresponding: true
+      roles: "Lead author"
+      affiliation:
+        - name: Johannes Kepler University
+          city: Linz
+          state: Austria
+          url: https://www.jku.at/en/institute-for-integrated-circuits-and-quantum-computing
+date: last-modified
+license: "Apache-2.0 license"
+copyright:
+  holder: "Martin Köhler, Patrick Fath, Harald Pretl and co-authors, Johannes Kepler University."
+  year: 2024-2025
+filters: ["inline-file-filter.lua"]
+format:
+  html:
+    number-sections: true
+    toc: true
+    toc-expand: 2
+  pdf:
+    toc: true
+    fig-align: center
+    lang: en-US
+    number-sections: true
+    papersize: A4
+    pdf-engine: xelatex
+    keep-tex: true
+    include-in-header:
+      text: |
+        \usepackage{pifont}
+        \usepackage{newunicodechar}
+        \newunicodechar{✔}{\ding{51}}
+        \newunicodechar{✘}{\ding{55}}
+        %---
+        \usepackage{geometry}
+        %% Set page size with a wider right margin
+        \geometry{a4paper, total={170mm,257mm}, left=20mm, top=20mm, bottom=20mm, right=20mm}
+        %---
+        \usepackage{fancyhdr}
+        %% Style the page number
+        \fancypagestyle{mystyle}{
+        \fancyhf{}
+        \fancyfoot{}
+        \fancyhead[L]{\leftmark}
+        \fancyhead[R]{\thepage} % Place the page number in the center of the header
+        \renewcommand\headrulewidth{0.4pt}  % Optional: Add a horizontal line below the header
+        \renewcommand\footrulewidth{0pt}    % Optional: Add a horizontal line above the footer
+        }
+        \setlength{\footskip}{20pt}
+        %---
+        \usepackage{arydshln}
+        %---
+        \usepackage{cancel}
+        %---
+    include-before-body:
+      text: |
+        \pagestyle{mystyle}
+bibliography: ../references.bib
+
+---
+
+{{< include _sec_intro.qmd >}}
+
+{{< pagebreak >}}
+
