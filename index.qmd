@@ -1,0 +1,25 @@
+---
+pagetitle: "About"
+---
+
+# KLayout Productivity Suite
+
+[![Quarto Publish](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/quarto-publish.yml/badge.svg?branch=main)](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/quarto-publish.yml)
+
+**(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)**
+
+The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
+
+{{< include doc/_plugin_table.qmd >}}
+
+Check out the [documentation](doc/doc.qmd) for more information.
+
+## Acknowledgements
+
+{{< include doc/_funding_note.qmd >}}
+
+## Licensing
+
+This repo is a meta-package, really containing only the documentation and a `grain.xml` with the list of dependencies.
+
+Please note that while the documentation is licensed under Apache 2.0 license, the plugins are published under the GNU General Public License 3.0.

@@ -1,0 +1,27 @@
+# Mac
+.DS_Store
+
+# Editor swap/backup files
+*.swp
+*.bak
+
+
+/.quarto/
+_site
+
+# Quarto Preview Artifacts
+doc/*.html
+doc/*.tex
+doc/_*_files
+doc/*_files
+_freeze
+site_libs
+*.quarto_ipynb
+index_files
+*.aux
+*.log
+index.tex
+
+notebooks/*_files
+
+/.luarc.json

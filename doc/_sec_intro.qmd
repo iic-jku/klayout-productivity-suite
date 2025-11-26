@@ -1,0 +1,89 @@
+::: {.content-hidden}
+Copyright (C) 2025 Martin Köhler and co-authors (martin.koehler@jku.at)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+:::
+
+# Introduction {#sec-intro}
+
+## Motivation
+
+TODO
+
+## Acknowledgements
+
+{{< include _funding_note.qmd >}}
+
+## About KLayout Productivity Suite
+
+[KLayout](https://klayout.de) is an open source VLSI layout viewer and editor.
+
+The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
+
+{{< include _plugin_table.qmd >}}
+
+::: {.callout-tip}
+The *KLayout Productivity Suite* source code itself is made publicly available on GitHub and shared under the GPL-3.0 license (see links above in table above).
+
+KPEX *documentation* source code is made publicly available on GitHub ([follow this link](https://github.com/iic-jku/klayout-productivity-suite)) and shared under the Apache-2.0 license.
+
+Please feel free to create issues and/or submit pull requests on GitHub to fix errors and omissions!
+
+The production of the tool and this document would be impossible without these (and many more) great open-source software products: `KLayout`, `Quarto`, `Python`, `ngspice`, `Numpy`, `Scipy`, `Matplotlib`, `Git`, `Docker`, `Ubuntu`, `Linux`…
+:::
+
+
+## Installation {#sec-intro-installation}
+
+Generally, the plugins can be installed using the KLayout Package Manager.
+
+- `KLayoutProductivitySuite` is a meta-package, that will install all of the plugins
+- Alternatively, single plugins can be cherry-picked using the plugin title in the above table (without whitespace)
+
+As for the dependencies, there are multiple options available.
+
+### Option 1: Using `IIC-OSIC-TOOLS` Docker Image
+
+We provide a comprehensive, low entry barrier Docker image that comes pre-installed with most relevant open source ASIC tools, as well as the open PDKs. This is a pre-compiled Docker image which allows to do circuit design on a virtual machine on virtually any type of computing equipment (personal PC, Raspberry Pi, cloud server) on various operating systems (Windows, macOS, Linux). 
+
+For further information please look at the [Docker Hub page](https://hub.docker.com/r/hpretl/iic-osic-tools) and for detailed instructions at the [IIC-OSIC-TOOLS GitHub page](https://github.com/iic-jku/IIC-OSIC-TOOLS).
+
+::: {.callout-warning title="Linux"}
+In this document, we assume that users have a basic knowledge of Linux and how to operate it using the terminal (shell). If you are not yet familiar with Linux (which is basically a must when doing integrated circuit design as many tools are only available on Linux), then please check out a Linux introductory course or tutorial online, there are many resources available.
+
+A summary of important Linux shell commands is provided in [IIC-JKU Linux Cheatsheet](https://iic-jku.github.io/analog-circuit-design/#sec-linux-cheatsheet).
+:::
+
+### Option 2: Standalone Installation
+
+- [KLayout](https://klayout.de) layout tool:
+  - is mandatory for all engines (besides the MAGIC-wrapper)
+  - [get the latest pre-built package version](https://www.klayout.de/build.html) 
+  - or [follow the build instructions](https://www.klayout.de/build.html)
+
+- [Skywater sky130A PDK](https://skywater-pdk.readthedocs.io):
+  - optional
+  - `pip3 install --upgrade ciel`  (install PDK package manager)
+  - `ciel ls-remote --pdk sky130A` (retrieve available PDK releases
+    - for example `PRE-RELEASE 0c1df35fd535299ea1ef74d1e9e15dedaeb34c32 (2024.12.11)`)
+  - `ciel enable --pdk sky130A 0c1df35fd535299ea1ef74d1e9e15dedaeb34c32`  (install a PDK version)
+  - PDK files now have been installed under `$HOME/.volare/sky130A`
+
+- [IHP SG13G2 PDK](https://github.com/IHP-GmbH/IHP-Open-PDK):
+  - optional
+  - `pip3 install --upgrade ciel`  (install PDK package manager)
+  - `ciel ls-remote --pdk ihp-sg13g2` (retrieve available PDK releases
+    - for example `PRE-RELEASE cb7daaa8901016cf7c5d272dfa322c41f024931f (2025.07.18)`)
+  - `ciel enable --pdk ihp-sg13g2 cb7daaa8901016cf7c5d272dfa322c41f024931f`  (install a PDK version)
+  - PDK files now have been installed under `$HOME/.volare/ihp-sg13g2`
+
