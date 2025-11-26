@@ -18,6 +18,6 @@ Check out the [documentation](https://iic-jku.github.io/klayout-productivity-sui
 
 ## Licensing
 
-This repo is a meta-package, really containing only the documentation and a `grain.xml` with the list of dependencies.
+This repository is a meta-package, really containing only the documentation and a `grain.xml` with the list of dependencies.
 
 Please note that while the documentation is licensed under Apache 2.0 license, the plugins are published under the GNU General Public License 3.0.
