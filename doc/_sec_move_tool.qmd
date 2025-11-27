@@ -14,7 +14,69 @@ See the License for the specific language governing permissions and
 limitations under the License.
 :::
 
-# Move Tool {#sec-move-tool}
+# Move Quickly Tool {#sec-move-quickly-tool}
 
-TODO
+Boost your layout productivity with quick moves of layout elements, such as
 
+   * cell instances
+   * shapes (e.g. polygons, boxes, paths)
+
+
+## Usage
+
+![Move Quickly Tool](figures/move-quickly-tool/klayout-move-screenshot.jpg)
+
+### Pre-selection
+
+- You can select instances and shapes (you want to move), before invoking the tool
+   - The selection will be displayed in the dock setup panel
+
+### Tool activation and deactivation
+
+- Click the *Move Quickly* tool or press `M` to enter the tool mode (if you've configured the key binding [as explained here](#sec-move-quickly-tool-shortcut)
+- Press `Esc` at any time to abort the tool and activate the regular KLayout selection tool.
+
+### Example 1: Moving single object (mouse)
+
+- Activate the tool
+- If there is no selection, left-click an object to move it
+- Otherwise, left-click again to move it
+- Move the mouse to the destination
+- Click to move the object
+
+### Example 2: Moving single object (keyboard)
+
+- Activate the tool
+- Left-click an object to select it
+- Press `Tab` to enter the dock setup widget
+- Provide either absolute positions or relativ deltas
+- Press `Enter` to commit the move operation
+
+### Example 3: Extend selection
+
+To keep the current selection, and extend it with additionally selected objects:
+
+- Activate the tool
+- Select an object
+- Hold `Shift` and select additional object(s)
+- Click to start moving
+- Move the mouse to the desired destination
+- Commit the move operation with a click or by pressing `Enter`
+
+### Example 4: Drag selection
+- Activate the tool
+- Select object(s) by dragging the mouse
+- Hold `Shift` and select additional object(s)
+- Click to start moving
+- Move the mouse to the desired destination
+- Commit the move operation with a click or by pressing `Enter`
+
+ 
+## Pro-Tip: assign key binding `M` to the tool {#sec-move-quickly-tool-shortcut}
+
+- In the main menu, open the Preferences/Settings in KLayout
+- Navigate to *Application*→*Customize Menu*
+- Search for 'Move'
+- Assign the shortcut `M` to the path `edit_menu.mode_menu.Move_quickly`
+
+![Assign key binding](figures/move-quickly-tool/assign-shortcut.jpg){#fig-move-quickly-tool-key-binding}
