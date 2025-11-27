@@ -16,6 +16,7 @@ limitations under the License.
 
 The available plugins are listed in the table below.
 
+<!--
 | Title | Description | Repository URL | Issue tracking |
 |---|---|---|---|
 | Align Tool Plugin | Tool to align layout objects | <https://github.com/iic-jku/klayout-align-tool> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-align-tool/issues) |
@@ -26,3 +27,15 @@ The available plugins are listed in the table below.
 | Pin Tool Plugin | Efficient placement of pins | <https://github.com/iic-jku/klayout-pin-tool> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-pin-tool/issues) |
 | Plugin Utilities Library | Utility library used by various IIC KLayout plugins | <https://github.com/iic-jku/klayout-plugin-utils> | [![GitHub issues](https://img.shields.io/badge/issue_tracking-github-blue.svg)](https://github.com/iic-jku/klayout-plugin-utils/issues) |
 
+-->
+
+
+| Title | Description | Repository URL |
+|---|---|---|
+| Align Tool Plugin | Tool to align layout objects | <https://github.com/iic-jku/klayout-align-tool> |
+| Automatic Backups | Create automatic backups of edited layouts | <https://github.com/iic-jku/klayout-auto-backup> |
+| Layer Shortcuts Plugin | Shortcuts to quickly change layer visibility | <https://github.com/iic-jku/klayout-layer-shortcuts> |
+| Library Manager Plugin | Library manager for hierarchical layouts | <https://github.com/iic-jku/klayout-library-manager> |
+| Move Quickly Tool Plugin | Tool to quickly move layout objects | <https://github.com/iic-jku/klayout-move-tool> |
+| Pin Tool Plugin | Efficient placement of pins | <https://github.com/iic-jku/klayout-pin-tool> |
+| Plugin Utilities Library | Utility library used by various IIC KLayout plugins | <https://github.com/iic-jku/klayout-plugin-utils> |
