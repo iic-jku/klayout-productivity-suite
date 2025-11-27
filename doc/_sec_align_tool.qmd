@@ -16,5 +16,82 @@ limitations under the License.
 
 # Align Tool {#sec-align-tool}
 
-TODO
+## Motivation
+
+Boost your layout productivity with quick alignments of layout elements, such as
+
+- cell instances
+- shapes (e.g. polygons, boxes, paths)
+
+Choose constraints by selecting features, such as
+
+- edges (the entire edge)
+- points (edge end points or the edge middle point)
+
+## Usage
+
+![Align Tool](figures/align-tool/klayout-align-screenshot.jpg)
+
+### Pre-Selection
+
+You can select instances and shapes (you want to align), prior to invoking the tool, thus making a *pre-selection*.
+The selection status will be displayed in the dock setup panel, as seen in @fig-align-tool-status-dock.
+If no pre-selection is made, the shape or instance of the source reference point is also the object being aligned.
+
+::: {#fig-align-tool-status-dock layout-nrow=1 layout-ncol=2}
+
+![No Preselection](figures/align-tool/dock-setup-panel-no-preselection.jpg)
+
+![With Preselection](figures/align-tool/dock-setup-panel-preselection.jpg)
+
+Dock Setup Panel
+:::
+
+### Selecting Features
+
+Either points or edges can be chosen as the alignment reference.
+
+1. Select the midpoint or one of the endpoints of an edge of a shape or instance bounding box. The search box is shown as a dashed rectangle
+   - points must be within the search box
+   - edges just intersect the search box
+2. Left-click to apply the selection
+
+### Example 1: point-to-point alignment
+
+1. Ensure there is no pre-selection
+2. Click the *Align* tool (@fig-example1-select-align-tool)
+   - or press `A` to enter the align mode (if you've configured the key binding [as explained here](#sec-assign-key-binding)).
+3. Select feature of the shape to be moved/aligned, the *source reference* (@fig-example1-select-source-ref)
+4. Select feature of the other shape that acts as the *target reference* (@fig-example1-select-target-ref)
+5. Left-click to apply the alignment (@fig-example1-apply-alignment)
+6. Alternatively, press Esc to cancel the operation
+
+![Select Align Tool](figures/align-tool/marked-step1-select-align-tool.jpg){#fig-example1-select-align-tool}
+
+![Select *source reference* point to align](figures/align-tool/marked-step2-select-point-to-align.jpg){#fig-example1-select-source-ref}
+
+![Select *target reference* point to move to](figures/align-tool/marked-step3-select-point-to-move-to.jpg){#fig-example1-select-target-ref}
+
+![Alignment done](figures/align-tool/marked-step4-alignment-done.jpg){#fig-example1-apply-alignment}
+
+### Example 2: edge-to-edge alignment
+
+Notes on aligning edges to edges:
+
+- edges must be parallel
+- if the edge is too short and a point is always marked for selection, zoom in
+- in edge-to-edge mode, alignment is performed only along the perpendicular axis, so
+   - for horizontal edges: in the Y direction
+   - for vertical edges: in the X direction
+
+## Assign key binding `A` to the tool {#sec-assign-key-binding}
+
+To configure a key binding:
+
+- In the main menu, open the Preferences/Settings in KLayout
+- Navigate to *Application*→*Customize Menu*
+- Search for 'Align'
+- Assign the shortcut `A` to the path `edit_menu.mode_menu.Align`
+
+![Assign key binding](figures/align-tool/assign-shortcut.jpg){#fig-align-tool-key-binding}
 
