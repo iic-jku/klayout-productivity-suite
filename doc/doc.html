@@ -297,15 +297,20 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#sec-intro" id="toc-sec-intro" class="nav-link active" data-scroll-target="#sec-intro"><span class="header-section-number">1</span> Introduction</a>
   <ul class="collapse">
-  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">1.1</span> Motivation</a></li>
+  <li><a href="#about-klayout-productivity-suite" id="toc-about-klayout-productivity-suite" class="nav-link" data-scroll-target="#about-klayout-productivity-suite"><span class="header-section-number">1.1</span> About KLayout Productivity Suite</a></li>
   <li><a href="#acknowledgements" id="toc-acknowledgements" class="nav-link" data-scroll-target="#acknowledgements"><span class="header-section-number">1.2</span> Acknowledgements</a></li>
-  <li><a href="#about-klayout-productivity-suite" id="toc-about-klayout-productivity-suite" class="nav-link" data-scroll-target="#about-klayout-productivity-suite"><span class="header-section-number">1.3</span> About KLayout Productivity Suite</a></li>
-  <li><a href="#sec-intro-installation" id="toc-sec-intro-installation" class="nav-link" data-scroll-target="#sec-intro-installation"><span class="header-section-number">1.4</span> Installation</a>
+  <li><a href="#sec-intro-installation" id="toc-sec-intro-installation" class="nav-link" data-scroll-target="#sec-intro-installation"><span class="header-section-number">1.3</span> Installation</a>
   <ul class="collapse">
-  <li><a href="#option-1-using-iic-osic-tools-docker-image" id="toc-option-1-using-iic-osic-tools-docker-image" class="nav-link" data-scroll-target="#option-1-using-iic-osic-tools-docker-image"><span class="header-section-number">1.4.1</span> Option 1: Using <code>IIC-OSIC-TOOLS</code> Docker Image</a></li>
-  <li><a href="#option-2-standalone-installation" id="toc-option-2-standalone-installation" class="nav-link" data-scroll-target="#option-2-standalone-installation"><span class="header-section-number">1.4.2</span> Option 2: Standalone Installation</a></li>
+  <li><a href="#option-1-using-iic-osic-tools-docker-image" id="toc-option-1-using-iic-osic-tools-docker-image" class="nav-link" data-scroll-target="#option-1-using-iic-osic-tools-docker-image"><span class="header-section-number">1.3.1</span> Option 1: Using <code>IIC-OSIC-TOOLS</code> Docker Image</a></li>
+  <li><a href="#option-2-standalone-installation" id="toc-option-2-standalone-installation" class="nav-link" data-scroll-target="#option-2-standalone-installation"><span class="header-section-number">1.3.2</span> Option 2: Standalone Installation</a></li>
   </ul></li>
   </ul></li>
+  <li><a href="#sec-align-tool" id="toc-sec-align-tool" class="nav-link" data-scroll-target="#sec-align-tool"><span class="header-section-number">2</span> Align Tool</a></li>
+  <li><a href="#sec-move-tool" id="toc-sec-move-tool" class="nav-link" data-scroll-target="#sec-move-tool"><span class="header-section-number">3</span> Move Tool</a></li>
+  <li><a href="#sec-pin-tool" id="toc-sec-pin-tool" class="nav-link" data-scroll-target="#sec-pin-tool"><span class="header-section-number">4</span> Pin Tool</a></li>
+  <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a></li>
+  <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a></li>
+  <li><a href="#sec-auto-backup" id="toc-sec-auto-backup" class="nav-link" data-scroll-target="#sec-auto-backup"><span class="header-section-number">7</span> Automatic Backups</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="doc.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
     </div>
@@ -355,18 +360,10 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="sec-intro" class="level1" data-number="1">
 <h1 data-number="1"><span class="header-section-number">1</span> Introduction</h1>
-<section id="motivation" class="level2" data-number="1.1">
-<h2 data-number="1.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">1.1</span> Motivation</h2>
-<p>TODO</p>
-</section>
-<section id="acknowledgements" class="level2" data-number="1.2">
-<h2 data-number="1.2" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">1.2</span> Acknowledgements</h2>
-<p>TODO</p>
-</section>
-<section id="about-klayout-productivity-suite" class="level2" data-number="1.3">
-<h2 data-number="1.3" class="anchored" data-anchor-id="about-klayout-productivity-suite"><span class="header-section-number">1.3</span> About KLayout Productivity Suite</h2>
+<section id="about-klayout-productivity-suite" class="level2" data-number="1.1">
+<h2 data-number="1.1" class="anchored" data-anchor-id="about-klayout-productivity-suite"><span class="header-section-number">1.1</span> About KLayout Productivity Suite</h2>
 <p><a href="https://klayout.de">KLayout</a> is an open source VLSI layout viewer and editor.</p>
-<p>The <em>KLayout Productivity Suite</em> is a set of plugins to boost your layout productivity developed by the <a href="https://iic.jku.at"><strong>Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)</strong></a>.</p>
+<p>The <em>KLayout Productivity Suite</em> is a collection of plugins developed by the <a href="https://iic.jku.at"><strong>Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)</strong></a> to enhance your layout design productivity.</p>
 <p>The available plugins are listed in the table below.</p>
 <!--
 | Title | Description | Repository URL | Issue tracking |
@@ -437,22 +434,26 @@ Tip
 </div>
 <div class="callout-body-container callout-body">
 <p>The <em>KLayout Productivity Suite</em> source code itself is made publicly available on GitHub and shared under the GPL-3.0 license (see links above in table above).</p>
-<p>KPEX <em>documentation</em> source code is made publicly available on GitHub (<a href="https://github.com/iic-jku/klayout-productivity-suite">follow this link</a>) and shared under the Apache-2.0 license.</p>
+<p>The <em>KLayout Productivity Suite</em> <em>documentation</em> source code is made publicly available on GitHub (<a href="https://github.com/iic-jku/klayout-productivity-suite">follow this link</a>) and shared under the Apache-2.0 license.</p>
 <p>Please feel free to create issues and/or submit pull requests on GitHub to fix errors and omissions!</p>
 <p>The production of the tool and this document would be impossible without these (and many more) great open-source software products: <code>KLayout</code>, <code>Quarto</code>, <code>Python</code>, <code>ngspice</code>, <code>Numpy</code>, <code>Scipy</code>, <code>Matplotlib</code>, <code>Git</code>, <code>Docker</code>, <code>Ubuntu</code>, <code>Linux</code>…</p>
 </div>
 </div>
 </section>
-<section id="sec-intro-installation" class="level2" data-number="1.4">
-<h2 data-number="1.4" class="anchored" data-anchor-id="sec-intro-installation"><span class="header-section-number">1.4</span> Installation</h2>
+<section id="acknowledgements" class="level2" data-number="1.2">
+<h2 data-number="1.2" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">1.2</span> Acknowledgements</h2>
+<p>TODO</p>
+</section>
+<section id="sec-intro-installation" class="level2" data-number="1.3">
+<h2 data-number="1.3" class="anchored" data-anchor-id="sec-intro-installation"><span class="header-section-number">1.3</span> Installation</h2>
 <p>Generally, the plugins can be installed using the KLayout Package Manager.</p>
 <ul>
-<li><code>KLayoutProductivitySuite</code> is a meta-package, that will install all of the plugins</li>
+<li><code>KLayoutProductivitySuite</code> acts as a meta-package that can be installed in KLayout’s Package Manager. Once installed, it automatically pulls in all the plugins as <code>dependencies</code> through the <code>grain.xml</code></li>
 <li>Alternatively, single plugins can be cherry-picked using the plugin title in the above table (without whitespace)</li>
 </ul>
 <p>As for the dependencies, there are multiple options available.</p>
-<section id="option-1-using-iic-osic-tools-docker-image" class="level3" data-number="1.4.1">
-<h3 data-number="1.4.1" class="anchored" data-anchor-id="option-1-using-iic-osic-tools-docker-image"><span class="header-section-number">1.4.1</span> Option 1: Using <code>IIC-OSIC-TOOLS</code> Docker Image</h3>
+<section id="option-1-using-iic-osic-tools-docker-image" class="level3" data-number="1.3.1">
+<h3 data-number="1.3.1" class="anchored" data-anchor-id="option-1-using-iic-osic-tools-docker-image"><span class="header-section-number">1.3.1</span> Option 1: Using <code>IIC-OSIC-TOOLS</code> Docker Image</h3>
 <p>We provide a comprehensive, low entry barrier Docker image that comes pre-installed with most relevant open source ASIC tools, as well as the open PDKs. This is a pre-compiled Docker image which allows to do circuit design on a virtual machine on virtually any type of computing equipment (personal PC, Raspberry Pi, cloud server) on various operating systems (Windows, macOS, Linux).</p>
 <p>For further information please look at the <a href="https://hub.docker.com/r/hpretl/iic-osic-tools">Docker Hub page</a> and for detailed instructions at the <a href="https://github.com/iic-jku/IIC-OSIC-TOOLS">IIC-OSIC-TOOLS GitHub page</a>.</p>
 <div class="callout callout-style-default callout-warning callout-titled" title="Linux">
@@ -470,12 +471,11 @@ Tip
 </div>
 </div>
 </section>
-<section id="option-2-standalone-installation" class="level3" data-number="1.4.2">
-<h3 data-number="1.4.2" class="anchored" data-anchor-id="option-2-standalone-installation"><span class="header-section-number">1.4.2</span> Option 2: Standalone Installation</h3>
+<section id="option-2-standalone-installation" class="level3" data-number="1.3.2">
+<h3 data-number="1.3.2" class="anchored" data-anchor-id="option-2-standalone-installation"><span class="header-section-number">1.3.2</span> Option 2: Standalone Installation</h3>
 <ul>
 <li><a href="https://klayout.de">KLayout</a> layout tool:
 <ul>
-<li>is mandatory for all engines (besides the MAGIC-wrapper)</li>
 <li><a href="https://www.klayout.de/build.html">get the latest pre-built package version</a></li>
 <li>or <a href="https://www.klayout.de/build.html">follow the build instructions</a></li>
 </ul></li>
@@ -503,10 +503,40 @@ Tip
 </ul></li>
 </ul>
 <div style="page-break-after: always;"></div>
-
-
 </section>
 </section>
+</section>
+<section id="sec-align-tool" class="level1" data-number="2">
+<h1 data-number="2"><span class="header-section-number">2</span> Align Tool</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="sec-move-tool" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Move Tool</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="sec-pin-tool" class="level1" data-number="4">
+<h1 data-number="4"><span class="header-section-number">4</span> Pin Tool</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="sec-layer-shortcuts-plugin" class="level1" data-number="5">
+<h1 data-number="5"><span class="header-section-number">5</span> Layer Shortcuts Plugin</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="sec-library-manager" class="level1" data-number="6">
+<h1 data-number="6"><span class="header-section-number">6</span> Library Manager</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+</section>
+<section id="sec-auto-backup" class="level1" data-number="7">
+<h1 data-number="7"><span class="header-section-number">7</span> Automatic Backups</h1>
+<p>TODO</p>
+<div style="page-break-after: always;"></div>
+
+
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Apache-2.0 license</div></div></section></div></main> <!-- /main -->
