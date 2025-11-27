@@ -82,5 +82,26 @@
     "title": "KLayout Productivity Suite Documentation",
     "section": "3.2 Pro-Tip: assign key binding M to the tool",
     "text": "3.2 Pro-Tip: assign key binding M to the tool\n\nIn the main menu, open the Preferences/Settings in KLayout\nNavigate to Application→Customize Menu\nSearch for ‘Move’\nAssign the shortcut M to the path edit_menu.mode_menu.Move_quickly\n\n\n\n\n\n\n\nFigure 7: Assign key binding"
+  },
+  {
+    "objectID": "doc/doc.html#motivation-1",
+    "href": "doc/doc.html#motivation-1",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "4.1 Motivation",
+    "text": "4.1 Motivation\nBoost your layout productivity with quick placement of pins."
+  },
+  {
+    "objectID": "doc/doc.html#usage-2",
+    "href": "doc/doc.html#usage-2",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "4.2 Usage",
+    "text": "4.2 Usage\n\n4.2.1 Placing a pin\n\n\n\n\n\n\nFigure 8: Pin Tool\n\n\n\nThe Pin Tool will automatically choose the appropriate layer based on the selection in the layer table.\nE.g., if currently TopMetal1.drawing is selected (Figure 8), the layer TopMetal1 will be chosen.\nBefore placing the pin, configure the desired properties in the dock setup panel (Figure 9):\n\nLayer: usually pre-filled with the appropriate layer, but can be changed here\nPin: name of the pin label\nWidth / Height: dimensions of the pin\n\n\n\n\n\n\n\nFigure 9: Dock Setup Panel\n\n\n\nTo place a pin:\n\nMove the mouse to preview the pin placement (Figure 10)\n\nA dashed box will indicate the bounds of the pin\nA small circle will indicate the placement position\n\nLeft-click to place a pin\nPress Esc to quit the tool\n\n\n\n\n\n\n\nFigure 10: Pin Placement\n\n\n\n\n\n4.2.2 Combined usage with the Layer Shortcuts Plugin\nSay you want to place the same pin in multiple layers, there is a nice use case combination with the Layer Shortcuts Plugin:\n\nactivate the Pin Tool and name the pin label\npress key 1 to focus on layer group Metal1\nplace a pin in layer Metal1\npress key 2 to focus on layer group Metal2\nplace a pin in layer Metal2\npress key 3 to show all layers"
+  },
+  {
+    "objectID": "doc/doc.html#json-tech-files-for-supported-pdks",
+    "href": "doc/doc.html#json-tech-files-for-supported-pdks",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "4.3 JSON tech files for supported PDKs",
+    "text": "4.3 JSON tech files for supported PDKs\n\nsky130.jsonihp-sg13g2.json\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe JSON tech files are currently available for the PDKs:\n\nIHP SG13G2\nSkywater sky130"
   }
 ]

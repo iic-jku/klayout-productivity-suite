@@ -330,7 +330,16 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#sec-move-quickly-tool-shortcut" id="toc-sec-move-quickly-tool-shortcut" class="nav-link" data-scroll-target="#sec-move-quickly-tool-shortcut"><span class="header-section-number">3.2</span> Pro-Tip: assign key binding <code>M</code> to the tool</a></li>
   </ul></li>
-  <li><a href="#sec-pin-tool" id="toc-sec-pin-tool" class="nav-link" data-scroll-target="#sec-pin-tool"><span class="header-section-number">4</span> Pin Tool</a></li>
+  <li><a href="#sec-pin-tool" id="toc-sec-pin-tool" class="nav-link" data-scroll-target="#sec-pin-tool"><span class="header-section-number">4</span> Pin Tool</a>
+  <ul class="collapse">
+  <li><a href="#motivation-1" id="toc-motivation-1" class="nav-link" data-scroll-target="#motivation-1"><span class="header-section-number">4.1</span> Motivation</a></li>
+  <li><a href="#usage-2" id="toc-usage-2" class="nav-link" data-scroll-target="#usage-2"><span class="header-section-number">4.2</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#placing-a-pin" id="toc-placing-a-pin" class="nav-link" data-scroll-target="#placing-a-pin"><span class="header-section-number">4.2.1</span> Placing a pin</a></li>
+  <li><a href="#combined-usage-with-the-layer-shortcuts-plugin" id="toc-combined-usage-with-the-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#combined-usage-with-the-layer-shortcuts-plugin"><span class="header-section-number">4.2.2</span> Combined usage with the <em>Layer Shortcuts Plugin</em></a></li>
+  </ul></li>
+  <li><a href="#json-tech-files-for-supported-pdks" id="toc-json-tech-files-for-supported-pdks" class="nav-link" data-scroll-target="#json-tech-files-for-supported-pdks"><span class="header-section-number">4.3</span> JSON tech files for supported PDKs</a></li>
+  </ul></li>
   <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a></li>
   <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a></li>
   <li><a href="#sec-auto-backup" id="toc-sec-auto-backup" class="nav-link" data-scroll-target="#sec-auto-backup"><span class="header-section-number">7</span> Automatic Backups</a></li>
@@ -783,8 +792,130 @@ Figure&nbsp;7: Assign key binding
 </section>
 <section id="sec-pin-tool" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Pin Tool</h1>
-<p>TODO</p>
+<section id="motivation-1" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="motivation-1"><span class="header-section-number">4.1</span> Motivation</h2>
+<p>Boost your layout productivity with quick placement of pins.</p>
+</section>
+<section id="usage-2" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="usage-2"><span class="header-section-number">4.2</span> Usage</h2>
+<section id="placing-a-pin" class="level3" data-number="4.2.1">
+<h3 data-number="4.2.1" class="anchored" data-anchor-id="placing-a-pin"><span class="header-section-number">4.2.1</span> Placing a pin</h3>
+<div id="fig-pin-tool" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pin-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/pin-tool/klayout-pin-tool-screenshot.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;8: Pin Tool
+</figcaption>
+</figure>
+</div>
+<p>The <em>Pin Tool</em> will automatically choose the appropriate layer based on the selection in the layer table.</p>
+<p>E.g., if currently <code>TopMetal1.drawing</code> is selected (<a href="#fig-pin-tool" class="quarto-xref">Figure&nbsp;8</a>), the layer <code>TopMetal1</code> will be chosen.</p>
+<p>Before placing the pin, configure the desired properties in the dock setup panel (<a href="#fig-pin-tool-dock-setup-panel" class="quarto-xref">Figure&nbsp;9</a>):</p>
+<ul>
+<li><em>Layer</em>: usually pre-filled with the appropriate layer, but can be changed here</li>
+<li><em>Pin</em>: name of the pin label</li>
+<li><em>Width</em> / <em>Height</em>: dimensions of the pin</li>
+</ul>
+<div id="fig-pin-tool-dock-setup-panel" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pin-tool-dock-setup-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/pin-tool/dock-setup-panel.jpg" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-tool-dock-setup-panel-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;9: Dock Setup Panel
+</figcaption>
+</figure>
+</div>
+<p>To place a pin:</p>
+<ul>
+<li>Move the mouse to preview the pin placement (<a href="#fig-pin-tool-placement-preview" class="quarto-xref">Figure&nbsp;10</a>)
+<ul>
+<li>A dashed box will indicate the bounds of the pin</li>
+<li>A small circle will indicate the placement position</li>
+</ul></li>
+<li>Left-click to place a pin</li>
+<li>Press <code>Esc</code> to quit the tool</li>
+</ul>
+<div id="fig-pin-tool-placement-preview" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pin-tool-placement-preview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/pin-tool/pin-placement-preview.jpg" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pin-tool-placement-preview-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;10: Pin Placement
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="combined-usage-with-the-layer-shortcuts-plugin" class="level3" data-number="4.2.2">
+<h3 data-number="4.2.2" class="anchored" data-anchor-id="combined-usage-with-the-layer-shortcuts-plugin"><span class="header-section-number">4.2.2</span> Combined usage with the <em>Layer Shortcuts Plugin</em></h3>
+<p>Say you want to place the same pin in multiple layers, there is a nice use case combination with the <em>Layer Shortcuts Plugin</em>:</p>
+<ul>
+<li>activate the <em>Pin Tool</em> and name the pin label</li>
+<li>press key <code>1</code> to focus on layer group <code>Metal1</code></li>
+<li>place a pin in layer <code>Metal1</code></li>
+<li>press key <code>2</code> to focus on layer group <code>Metal2</code></li>
+<li>place a pin in layer <code>Metal2</code></li>
+<li>press key <code>3</code> to show all layers</li>
+</ul>
+</section>
+</section>
+<section id="json-tech-files-for-supported-pdks" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="json-tech-files-for-supported-pdks"><span class="header-section-number">4.3</span> JSON tech files for supported PDKs</h2>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href=""><code>sky130.json</code></a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href=""><code>ihp-sg13g2.json</code></a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.json-viewer/json-viewer/jquery.json-viewer.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.json-viewer/json-viewer/jquery.json-viewer.js"></script>
+<script> // Reusable function to fetch and render JSON  
+  function renderJson(jsonData, elementId) {
+      $(`#${elementId}`).jsonViewer(jsonData, { rootCollapsable: false, collapsed: true });
+  }
+</script>
+<div>
+<pre id="json-sky130-tech"></pre>
+</div>
+<script>
+  renderJson(JSON.parse(`
+
+   `), "json-sky130-tech");
+</script>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div>
+<pre id="json-ihp-sg13g2-tech"></pre>
+</div>
+<script>
+  renderJson(JSON.parse(`
+
+   `), "json-ihp-sg13g2-tech");
+</script>
+</div>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>The JSON tech files are currently available for the PDKs:</p>
+<ul>
+<li>IHP SG13G2</li>
+<li>Skywater sky130</li>
+</ul>
+</div>
+</div>
 <div style="page-break-after: always;"></div>
+</section>
 </section>
 <section id="sec-layer-shortcuts-plugin" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Layer Shortcuts Plugin</h1>
