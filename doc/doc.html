@@ -305,7 +305,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#option-2-standalone-installation" id="toc-option-2-standalone-installation" class="nav-link" data-scroll-target="#option-2-standalone-installation"><span class="header-section-number">1.3.2</span> Option 2: Standalone Installation</a></li>
   </ul></li>
   </ul></li>
-  <li><a href="#sec-align-tool" id="toc-sec-align-tool" class="nav-link" data-scroll-target="#sec-align-tool"><span class="header-section-number">2</span> Align Tool</a></li>
+  <li><a href="#sec-align-tool" id="toc-sec-align-tool" class="nav-link" data-scroll-target="#sec-align-tool"><span class="header-section-number">2</span> Align Tool</a>
+  <ul class="collapse">
+  <li><a href="#motivation" id="toc-motivation" class="nav-link" data-scroll-target="#motivation"><span class="header-section-number">2.1</span> Motivation</a></li>
+  <li><a href="#usage" id="toc-usage" class="nav-link" data-scroll-target="#usage"><span class="header-section-number">2.2</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#pre-selection" id="toc-pre-selection" class="nav-link" data-scroll-target="#pre-selection"><span class="header-section-number">2.2.1</span> Pre-Selection</a></li>
+  <li><a href="#selecting-features" id="toc-selecting-features" class="nav-link" data-scroll-target="#selecting-features"><span class="header-section-number">2.2.2</span> Selecting Features</a></li>
+  <li><a href="#example-1-point-to-point-alignment" id="toc-example-1-point-to-point-alignment" class="nav-link" data-scroll-target="#example-1-point-to-point-alignment"><span class="header-section-number">2.2.3</span> Example 1: point-to-point alignment</a></li>
+  <li><a href="#example-2-edge-to-edge-alignment" id="toc-example-2-edge-to-edge-alignment" class="nav-link" data-scroll-target="#example-2-edge-to-edge-alignment"><span class="header-section-number">2.2.4</span> Example 2: edge-to-edge alignment</a></li>
+  </ul></li>
+  <li><a href="#sec-assign-key-binding" id="toc-sec-assign-key-binding" class="nav-link" data-scroll-target="#sec-assign-key-binding"><span class="header-section-number">2.3</span> Assign key binding <code>A</code> to the tool</a></li>
+  </ul></li>
   <li><a href="#sec-move-tool" id="toc-sec-move-tool" class="nav-link" data-scroll-target="#sec-move-tool"><span class="header-section-number">3</span> Move Tool</a></li>
   <li><a href="#sec-pin-tool" id="toc-sec-pin-tool" class="nav-link" data-scroll-target="#sec-pin-tool"><span class="header-section-number">4</span> Pin Tool</a></li>
   <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a></li>
@@ -508,8 +519,149 @@ Tip
 </section>
 <section id="sec-align-tool" class="level1" data-number="2">
 <h1 data-number="2"><span class="header-section-number">2</span> Align Tool</h1>
-<p>TODO</p>
+<section id="motivation" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="motivation"><span class="header-section-number">2.1</span> Motivation</h2>
+<p>Boost your layout productivity with quick alignments of layout elements, such as</p>
+<ul>
+<li>cell instances</li>
+<li>shapes (e.g.&nbsp;polygons, boxes, paths)</li>
+</ul>
+<p>Choose constraints by selecting features, such as</p>
+<ul>
+<li>edges (the entire edge)</li>
+<li>points (edge end points or the edge middle point)</li>
+</ul>
+</section>
+<section id="usage" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="usage"><span class="header-section-number">2.2</span> Usage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/align-tool/klayout-align-screenshot.jpg" class="img-fluid figure-img"></p>
+<figcaption>Align Tool</figcaption>
+</figure>
+</div>
+<section id="pre-selection" class="level3" data-number="2.2.1">
+<h3 data-number="2.2.1" class="anchored" data-anchor-id="pre-selection"><span class="header-section-number">2.2.1</span> Pre-Selection</h3>
+<p>You can select instances and shapes (you want to align), prior to invoking the tool, thus making a <em>pre-selection</em>. The selection status will be displayed in the dock setup panel, as seen in <a href="#fig-align-tool-status-dock" class="quarto-xref">Figure&nbsp;1</a>. If no pre-selection is made, the shape or instance of the source reference point is also the object being aligned.</p>
+<div id="fig-align-tool-status-dock" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-align-tool-status-dock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/align-tool/dock-setup-panel-no-preselection.jpg" class="img-fluid figure-img"></p>
+<figcaption>No Preselection</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/align-tool/dock-setup-panel-preselection.jpg" class="img-fluid figure-img"></p>
+<figcaption>With Preselection</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-align-tool-status-dock-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Dock Setup Panel
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="selecting-features" class="level3" data-number="2.2.2">
+<h3 data-number="2.2.2" class="anchored" data-anchor-id="selecting-features"><span class="header-section-number">2.2.2</span> Selecting Features</h3>
+<p>Either points or edges can be chosen as the alignment reference.</p>
+<ol type="1">
+<li>Select the midpoint or one of the endpoints of an edge of a shape or instance bounding box. The search box is shown as a dashed rectangle
+<ul>
+<li>points must be within the search box</li>
+<li>edges just intersect the search box</li>
+</ul></li>
+<li>Left-click to apply the selection</li>
+</ol>
+</section>
+<section id="example-1-point-to-point-alignment" class="level3" data-number="2.2.3">
+<h3 data-number="2.2.3" class="anchored" data-anchor-id="example-1-point-to-point-alignment"><span class="header-section-number">2.2.3</span> Example 1: point-to-point alignment</h3>
+<ol type="1">
+<li>Ensure there is no pre-selection</li>
+<li>Click the <em>Align</em> tool (<a href="#fig-example1-select-align-tool" class="quarto-xref">Figure&nbsp;2</a>)
+<ul>
+<li>or press <code>A</code> to enter the align mode (if you’ve configured the key binding <a href="#sec-assign-key-binding">as explained here</a>).</li>
+</ul></li>
+<li>Select feature of the shape to be moved/aligned, the <em>source reference</em> (<a href="#fig-example1-select-source-ref" class="quarto-xref">Figure&nbsp;3</a>)</li>
+<li>Select feature of the other shape that acts as the <em>target reference</em> (<a href="#fig-example1-select-target-ref" class="quarto-xref">Figure&nbsp;4</a>)</li>
+<li>Left-click to apply the alignment (<a href="#fig-example1-apply-alignment" class="quarto-xref">Figure&nbsp;5</a>)</li>
+<li>Alternatively, press Esc to cancel the operation</li>
+</ol>
+<div id="fig-example1-select-align-tool" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example1-select-align-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/align-tool/marked-step1-select-align-tool.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example1-select-align-tool-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Select Align Tool
+</figcaption>
+</figure>
+</div>
+<div id="fig-example1-select-source-ref" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example1-select-source-ref-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/align-tool/marked-step2-select-point-to-align.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example1-select-source-ref-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Select <em>source reference</em> point to align
+</figcaption>
+</figure>
+</div>
+<div id="fig-example1-select-target-ref" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example1-select-target-ref-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/align-tool/marked-step3-select-point-to-move-to.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example1-select-target-ref-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Select <em>target reference</em> point to move to
+</figcaption>
+</figure>
+</div>
+<div id="fig-example1-apply-alignment" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-example1-apply-alignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/align-tool/marked-step4-alignment-done.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-example1-apply-alignment-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Alignment done
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="example-2-edge-to-edge-alignment" class="level3" data-number="2.2.4">
+<h3 data-number="2.2.4" class="anchored" data-anchor-id="example-2-edge-to-edge-alignment"><span class="header-section-number">2.2.4</span> Example 2: edge-to-edge alignment</h3>
+<p>Notes on aligning edges to edges:</p>
+<ul>
+<li>edges must be parallel</li>
+<li>if the edge is too short and a point is always marked for selection, zoom in</li>
+<li>in edge-to-edge mode, alignment is performed only along the perpendicular axis, so
+<ul>
+<li>for horizontal edges: in the Y direction</li>
+<li>for vertical edges: in the X direction</li>
+</ul></li>
+</ul>
+</section>
+</section>
+<section id="sec-assign-key-binding" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="sec-assign-key-binding"><span class="header-section-number">2.3</span> Assign key binding <code>A</code> to the tool</h2>
+<p>To configure a key binding:</p>
+<ul>
+<li>In the main menu, open the Preferences/Settings in KLayout</li>
+<li>Navigate to <em>Application</em>→<em>Customize Menu</em></li>
+<li>Search for ‘Align’</li>
+<li>Assign the shortcut <code>A</code> to the path <code>edit_menu.mode_menu.Align</code></li>
+</ul>
 <div style="page-break-after: always;"></div>
+</section>
 </section>
 <section id="sec-move-tool" class="level1" data-number="3">
 <h1 data-number="3"><span class="header-section-number">3</span> Move Tool</h1>
