@@ -67,6 +67,6 @@
     "href": "doc/doc.html#sec-assign-key-binding",
     "title": "KLayout Productivity Suite Documentation",
     "section": "2.3 Assign key binding A to the tool",
-    "text": "2.3 Assign key binding A to the tool\nTo configure a key binding:\n\nIn the main menu, open the Preferences/Settings in KLayout\nNavigate to Application→Customize Menu\nSearch for ‘Align’\nAssign the shortcut A to the path edit_menu.mode_menu.Align"
+    "text": "2.3 Assign key binding A to the tool\nTo configure a key binding:\n\nIn the main menu, open the Preferences/Settings in KLayout\nNavigate to Application→Customize Menu\nSearch for ‘Align’\nAssign the shortcut A to the path edit_menu.mode_menu.Align\n\n\n\n\n\n\n\nFigure 6: Assign key binding"
   }
 ]
