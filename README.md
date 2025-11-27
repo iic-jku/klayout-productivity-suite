@@ -1,10 +1,10 @@
 # KLayout Productivity Suite
 
-The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
+The *KLayout Productivity Suite* is a collection of plugins developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at) to enhance your layout design productivity.
 
-This add-on is a meta-package, that can be installed in KLayout's Package Manager. It will then automatically install all the plugins as `dependencies` in the `grain.xml`.
+This add-on acts as a meta-package that can be installed in KLayout's Package Manager. Once installed, it automatically pulls in all the plugins as `dependencies` through the `grain.xml`.
 
-In alphabetical order:
+Included plugins (alphabetically):
 
    * https://github.com/iic-jku/klayout-align-tool
    * https://github.com/iic-jku/klayout-auto-backup
@@ -12,12 +12,10 @@ In alphabetical order:
    * https://github.com/iic-jku/klayout-library-manager
    * https://github.com/iic-jku/klayout-move-tool
    * https://github.com/iic-jku/klayout-pin-tool
-   * https://github.com/iic-jku/klayout-plugin-utils (this is a utility library used by multiple of the plugins)
+   * https://github.com/iic-jku/klayout-plugin-utils – a utility library used by several of the plugins
 
-Check out the [documentation](https://iic-jku.github.io/klayout-productivity-suite/) for more information.
+For more details, see the [documentation](https://iic-jku.github.io/klayout-productivity-suite/).
 
 ## Licensing
 
-This repository is a meta-package, really containing only the documentation and a `grain.xml` with the list of dependencies.
-
-Please note that while the documentation is licensed under Apache 2.0 license, the plugins are published under the GNU General Public License 3.0.
+Please note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0.

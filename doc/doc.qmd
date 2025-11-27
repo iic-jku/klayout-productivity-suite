@@ -68,3 +68,28 @@ bibliography: ../references.bib
 
 {{< pagebreak >}}
 
+{{< include _sec_align_tool.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include _sec_move_tool.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include _sec_pin_tool.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include _sec_layer_shortcuts.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include _sec_library_manager.qmd >}}
+
+{{< pagebreak >}}
+
+{{< include _sec_auto_backup.qmd >}}
+
+{{< pagebreak >}}
+
+

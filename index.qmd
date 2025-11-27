@@ -8,11 +8,14 @@ pagetitle: "About"
 
 **(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)**
 
-The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
+The *KLayout Productivity Suite* is a collection of plugins developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at) to enhance your layout design productivity.
+
+This add-on acts as a meta-package that can be installed in KLayout's Package Manager. Once installed, it automatically pulls in all the plugins as `dependencies` through the `grain.xml`.
 
 {{< include doc/_plugin_table.qmd >}}
 
-Check out the [documentation](doc/doc.qmd) for more information.
+For more details, see the [documentation](https://iic-jku.github.io/klayout-productivity-suite/).
+
 
 ## Acknowledgements
 
@@ -20,6 +23,4 @@ Check out the [documentation](doc/doc.qmd) for more information.
 
 ## Licensing
 
-This repo is a meta-package, really containing only the documentation and a `grain.xml` with the list of dependencies.
-
-Please note that while the documentation is licensed under Apache 2.0 license, the plugins are published under the GNU General Public License 3.0.
+Please note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0.

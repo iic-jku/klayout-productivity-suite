@@ -16,38 +16,33 @@ limitations under the License.
 
 # Introduction {#sec-intro}
 
-## Motivation
-
-TODO
-
-## Acknowledgements
-
-{{< include _funding_note.qmd >}}
-
 ## About KLayout Productivity Suite
 
 [KLayout](https://klayout.de) is an open source VLSI layout viewer and editor.
 
-The *KLayout Productivity Suite* is a set of plugins to boost your layout productivity developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at).
+The *KLayout Productivity Suite* is a collection of plugins developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at) to enhance your layout design productivity.
 
 {{< include _plugin_table.qmd >}}
 
 ::: {.callout-tip}
 The *KLayout Productivity Suite* source code itself is made publicly available on GitHub and shared under the GPL-3.0 license (see links above in table above).
 
-KPEX *documentation* source code is made publicly available on GitHub ([follow this link](https://github.com/iic-jku/klayout-productivity-suite)) and shared under the Apache-2.0 license.
+The *KLayout Productivity Suite* *documentation* source code is made publicly available on GitHub ([follow this link](https://github.com/iic-jku/klayout-productivity-suite)) and shared under the Apache-2.0 license.
 
 Please feel free to create issues and/or submit pull requests on GitHub to fix errors and omissions!
 
 The production of the tool and this document would be impossible without these (and many more) great open-source software products: `KLayout`, `Quarto`, `Python`, `ngspice`, `Numpy`, `Scipy`, `Matplotlib`, `Git`, `Docker`, `Ubuntu`, `Linux`…
 :::
 
+## Acknowledgements
+
+{{< include _funding_note.qmd >}}
 
 ## Installation {#sec-intro-installation}
 
 Generally, the plugins can be installed using the KLayout Package Manager.
 
-- `KLayoutProductivitySuite` is a meta-package, that will install all of the plugins
+- `KLayoutProductivitySuite` acts as a meta-package that can be installed in KLayout's Package Manager. Once installed, it automatically pulls in all the plugins as `dependencies` through the `grain.xml`
 - Alternatively, single plugins can be cherry-picked using the plugin title in the above table (without whitespace)
 
 As for the dependencies, there are multiple options available.
@@ -67,7 +62,6 @@ A summary of important Linux shell commands is provided in [IIC-JKU Linux Cheats
 ### Option 2: Standalone Installation
 
 - [KLayout](https://klayout.de) layout tool:
-  - is mandatory for all engines (besides the MAGIC-wrapper)
   - [get the latest pre-built package version](https://www.klayout.de/build.html) 
   - or [follow the build instructions](https://www.klayout.de/build.html)
 
