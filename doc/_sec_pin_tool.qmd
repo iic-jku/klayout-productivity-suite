@@ -1,3 +1,7 @@
+---
+filters: ["inline-file-filter.lua"]
+---
+
 ::: {.content-hidden}
 Copyright (C) 2025 Martin Köhler and co-authors (martin.koehler@jku.at)
 
@@ -16,5 +20,97 @@ limitations under the License.
 
 # Pin Tool {#sec-pin-tool}
 
-TODO
+## Motivation
+
+Boost your layout productivity with quick placement of pins.
+
+## Usage
+
+### Placing a pin
+
+![Pin Tool](figures/pin-tool/klayout-pin-tool-screenshot.jpg){#fig-pin-tool}
+
+The *Pin Tool* will automatically choose the appropriate layer based on the selection in the layer table.
+
+E.g., if currently `TopMetal1.drawing` is selected (@fig-pin-tool), the layer `TopMetal1` will be chosen.
+
+Before placing the pin, configure the desired properties in the dock setup panel (@fig-pin-tool-dock-setup-panel):
+
+- *Layer*: usually pre-filled with the appropriate layer, but can be changed here
+- *Pin*: name of the pin label
+- *Width* / *Height*: dimensions of the pin
+
+![Dock Setup Panel](figures/pin-tool/dock-setup-panel.jpg){#fig-pin-tool-dock-setup-panel width=400}
+
+To place a pin:
+
+- Move the mouse to preview the pin placement (@fig-pin-tool-placement-preview)
+   - A dashed box will indicate the bounds of the pin
+   - A small circle will indicate the placement position
+- Left-click to place a pin
+- Press `Esc` to quit the tool
+
+![Pin Placement](figures/pin-tool/pin-placement-preview.jpg){#fig-pin-tool-placement-preview width=400}
+
+### Combined usage with the *Layer Shortcuts Plugin*
+
+Say you want to place the same pin in multiple layers,
+there is a nice use case combination with the *Layer Shortcuts Plugin*:
+
+- activate the *Pin Tool* and name the pin label
+- press key `1` to focus on layer group `Metal1`
+- place a pin in layer `Metal1`
+- press key `2` to focus on layer group `Metal2`
+- place a pin in layer `Metal2`
+- press key `3` to show all layers
+
+## JSON tech files for supported PDKs
+
+:::: {.content-visible when-format="html"}
+
+::: {.panel-tabset}
+
+### `sky130.json`
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery.json-viewer/json-viewer/jquery.json-viewer.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/jquery.json-viewer/json-viewer/jquery.json-viewer.js"></script>
+<script> // Reusable function to fetch and render JSON  
+  function renderJson(jsonData, elementId) {
+      $(`#${elementId}`).jsonViewer(jsonData, { rootCollapsable: false, collapsed: true });
+  }
+</script>
+
+<div>
+  <pre id="json-sky130-tech"></pre>
+</div>
+
+<script>
+  renderJson(JSON.parse(`
+{{file:data/pin-tool/sky130.json}}
+   `), "json-sky130-tech");
+</script>
+
+
+### `ihp-sg13g2.json`
+
+<div>
+  <pre id="json-ihp-sg13g2-tech"></pre>
+</div>
+
+<script>
+  renderJson(JSON.parse(`
+{{file:data/pin-tool/ihp-sg13g2.json}}
+   `), "json-ihp-sg13g2-tech");
+</script>
+
+:::
+:::
+
+::: {.callout-note}
+The JSON tech files are currently available for the PDKs:
+
+- IHP SG13G2
+- Skywater sky130
+:::
 
