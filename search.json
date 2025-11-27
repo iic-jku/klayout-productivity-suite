@@ -68,5 +68,19 @@
     "title": "KLayout Productivity Suite Documentation",
     "section": "2.3 Assign key binding A to the tool",
     "text": "2.3 Assign key binding A to the tool\nTo configure a key binding:\n\nIn the main menu, open the Preferences/Settings in KLayout\nNavigate to Application→Customize Menu\nSearch for ‘Align’\nAssign the shortcut A to the path edit_menu.mode_menu.Align\n\n\n\n\n\n\n\nFigure 6: Assign key binding"
+  },
+  {
+    "objectID": "doc/doc.html#usage-1",
+    "href": "doc/doc.html#usage-1",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "3.1 Usage",
+    "text": "3.1 Usage\n\n\n\nMove Quickly Tool\n\n\n\n3.1.1 Pre-selection\n\nYou can select instances and shapes (you want to move), before invoking the tool\n\nThe selection will be displayed in the dock setup panel\n\n\n\n\n3.1.2 Tool activation and deactivation\n\nClick the Move Quickly tool or press M to enter the tool mode (if you’ve configured the key binding as explained here\nPress Esc at any time to abort the tool and activate the regular KLayout selection tool.\n\n\n\n3.1.3 Example 1: Moving single object (mouse)\n\nActivate the tool\nIf there is no selection, left-click an object to move it\nOtherwise, left-click again to move it\nMove the mouse to the destination\nClick to move the object\n\n\n\n3.1.4 Example 2: Moving single object (keyboard)\n\nActivate the tool\nLeft-click an object to select it\nPress Tab to enter the dock setup widget\nProvide either absolute positions or relativ deltas\nPress Enter to commit the move operation\n\n\n\n3.1.5 Example 3: Extend selection\nTo keep the current selection, and extend it with additionally selected objects:\n\nActivate the tool\nSelect an object\nHold Shift and select additional object(s)\nClick to start moving\nMove the mouse to the desired destination\nCommit the move operation with a click or by pressing Enter\n\n\n\n3.1.6 Example 4: Drag selection\n\nActivate the tool\nSelect object(s) by dragging the mouse\nHold Shift and select additional object(s)\nClick to start moving\nMove the mouse to the desired destination\nCommit the move operation with a click or by pressing Enter"
+  },
+  {
+    "objectID": "doc/doc.html#sec-move-quickly-tool-shortcut",
+    "href": "doc/doc.html#sec-move-quickly-tool-shortcut",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "3.2 Pro-Tip: assign key binding M to the tool",
+    "text": "3.2 Pro-Tip: assign key binding M to the tool\n\nIn the main menu, open the Preferences/Settings in KLayout\nNavigate to Application→Customize Menu\nSearch for ‘Move’\nAssign the shortcut M to the path edit_menu.mode_menu.Move_quickly\n\n\n\n\n\n\n\nFigure 7: Assign key binding"
   }
 ]

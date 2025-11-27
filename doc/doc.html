@@ -317,7 +317,19 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#sec-assign-key-binding" id="toc-sec-assign-key-binding" class="nav-link" data-scroll-target="#sec-assign-key-binding"><span class="header-section-number">2.3</span> Assign key binding <code>A</code> to the tool</a></li>
   </ul></li>
-  <li><a href="#sec-move-tool" id="toc-sec-move-tool" class="nav-link" data-scroll-target="#sec-move-tool"><span class="header-section-number">3</span> Move Tool</a></li>
+  <li><a href="#sec-move-quickly-tool" id="toc-sec-move-quickly-tool" class="nav-link" data-scroll-target="#sec-move-quickly-tool"><span class="header-section-number">3</span> Move Quickly Tool</a>
+  <ul class="collapse">
+  <li><a href="#usage-1" id="toc-usage-1" class="nav-link" data-scroll-target="#usage-1"><span class="header-section-number">3.1</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#pre-selection-1" id="toc-pre-selection-1" class="nav-link" data-scroll-target="#pre-selection-1"><span class="header-section-number">3.1.1</span> Pre-selection</a></li>
+  <li><a href="#tool-activation-and-deactivation" id="toc-tool-activation-and-deactivation" class="nav-link" data-scroll-target="#tool-activation-and-deactivation"><span class="header-section-number">3.1.2</span> Tool activation and deactivation</a></li>
+  <li><a href="#example-1-moving-single-object-mouse" id="toc-example-1-moving-single-object-mouse" class="nav-link" data-scroll-target="#example-1-moving-single-object-mouse"><span class="header-section-number">3.1.3</span> Example 1: Moving single object (mouse)</a></li>
+  <li><a href="#example-2-moving-single-object-keyboard" id="toc-example-2-moving-single-object-keyboard" class="nav-link" data-scroll-target="#example-2-moving-single-object-keyboard"><span class="header-section-number">3.1.4</span> Example 2: Moving single object (keyboard)</a></li>
+  <li><a href="#example-3-extend-selection" id="toc-example-3-extend-selection" class="nav-link" data-scroll-target="#example-3-extend-selection"><span class="header-section-number">3.1.5</span> Example 3: Extend selection</a></li>
+  <li><a href="#example-4-drag-selection" id="toc-example-4-drag-selection" class="nav-link" data-scroll-target="#example-4-drag-selection"><span class="header-section-number">3.1.6</span> Example 4: Drag selection</a></li>
+  </ul></li>
+  <li><a href="#sec-move-quickly-tool-shortcut" id="toc-sec-move-quickly-tool-shortcut" class="nav-link" data-scroll-target="#sec-move-quickly-tool-shortcut"><span class="header-section-number">3.2</span> Pro-Tip: assign key binding <code>M</code> to the tool</a></li>
+  </ul></li>
   <li><a href="#sec-pin-tool" id="toc-sec-pin-tool" class="nav-link" data-scroll-target="#sec-pin-tool"><span class="header-section-number">4</span> Pin Tool</a></li>
   <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a></li>
   <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a></li>
@@ -673,10 +685,101 @@ Figure&nbsp;6: Assign key binding
 <div style="page-break-after: always;"></div>
 </section>
 </section>
-<section id="sec-move-tool" class="level1" data-number="3">
-<h1 data-number="3"><span class="header-section-number">3</span> Move Tool</h1>
-<p>TODO</p>
+<section id="sec-move-quickly-tool" class="level1" data-number="3">
+<h1 data-number="3"><span class="header-section-number">3</span> Move Quickly Tool</h1>
+<p>Boost your layout productivity with quick moves of layout elements, such as</p>
+<ul>
+<li>cell instances</li>
+<li>shapes (e.g.&nbsp;polygons, boxes, paths)</li>
+</ul>
+<section id="usage-1" class="level2" data-number="3.1">
+<h2 data-number="3.1" class="anchored" data-anchor-id="usage-1"><span class="header-section-number">3.1</span> Usage</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="figures/move-quickly-tool/klayout-move-screenshot.jpg" class="img-fluid figure-img"></p>
+<figcaption>Move Quickly Tool</figcaption>
+</figure>
+</div>
+<section id="pre-selection-1" class="level3" data-number="3.1.1">
+<h3 data-number="3.1.1" class="anchored" data-anchor-id="pre-selection-1"><span class="header-section-number">3.1.1</span> Pre-selection</h3>
+<ul>
+<li>You can select instances and shapes (you want to move), before invoking the tool
+<ul>
+<li>The selection will be displayed in the dock setup panel</li>
+</ul></li>
+</ul>
+</section>
+<section id="tool-activation-and-deactivation" class="level3" data-number="3.1.2">
+<h3 data-number="3.1.2" class="anchored" data-anchor-id="tool-activation-and-deactivation"><span class="header-section-number">3.1.2</span> Tool activation and deactivation</h3>
+<ul>
+<li>Click the <em>Move Quickly</em> tool or press <code>M</code> to enter the tool mode (if you’ve configured the key binding <a href="#sec-move-quickly-tool-shortcut">as explained here</a></li>
+<li>Press <code>Esc</code> at any time to abort the tool and activate the regular KLayout selection tool.</li>
+</ul>
+</section>
+<section id="example-1-moving-single-object-mouse" class="level3" data-number="3.1.3">
+<h3 data-number="3.1.3" class="anchored" data-anchor-id="example-1-moving-single-object-mouse"><span class="header-section-number">3.1.3</span> Example 1: Moving single object (mouse)</h3>
+<ul>
+<li>Activate the tool</li>
+<li>If there is no selection, left-click an object to move it</li>
+<li>Otherwise, left-click again to move it</li>
+<li>Move the mouse to the destination</li>
+<li>Click to move the object</li>
+</ul>
+</section>
+<section id="example-2-moving-single-object-keyboard" class="level3" data-number="3.1.4">
+<h3 data-number="3.1.4" class="anchored" data-anchor-id="example-2-moving-single-object-keyboard"><span class="header-section-number">3.1.4</span> Example 2: Moving single object (keyboard)</h3>
+<ul>
+<li>Activate the tool</li>
+<li>Left-click an object to select it</li>
+<li>Press <code>Tab</code> to enter the dock setup widget</li>
+<li>Provide either absolute positions or relativ deltas</li>
+<li>Press <code>Enter</code> to commit the move operation</li>
+</ul>
+</section>
+<section id="example-3-extend-selection" class="level3" data-number="3.1.5">
+<h3 data-number="3.1.5" class="anchored" data-anchor-id="example-3-extend-selection"><span class="header-section-number">3.1.5</span> Example 3: Extend selection</h3>
+<p>To keep the current selection, and extend it with additionally selected objects:</p>
+<ul>
+<li>Activate the tool</li>
+<li>Select an object</li>
+<li>Hold <code>Shift</code> and select additional object(s)</li>
+<li>Click to start moving</li>
+<li>Move the mouse to the desired destination</li>
+<li>Commit the move operation with a click or by pressing <code>Enter</code></li>
+</ul>
+</section>
+<section id="example-4-drag-selection" class="level3" data-number="3.1.6">
+<h3 data-number="3.1.6" class="anchored" data-anchor-id="example-4-drag-selection"><span class="header-section-number">3.1.6</span> Example 4: Drag selection</h3>
+<ul>
+<li>Activate the tool</li>
+<li>Select object(s) by dragging the mouse</li>
+<li>Hold <code>Shift</code> and select additional object(s)</li>
+<li>Click to start moving</li>
+<li>Move the mouse to the desired destination</li>
+<li>Commit the move operation with a click or by pressing <code>Enter</code></li>
+</ul>
+</section>
+</section>
+<section id="sec-move-quickly-tool-shortcut" class="level2" data-number="3.2">
+<h2 data-number="3.2" class="anchored" data-anchor-id="sec-move-quickly-tool-shortcut"><span class="header-section-number">3.2</span> Pro-Tip: assign key binding <code>M</code> to the tool</h2>
+<ul>
+<li>In the main menu, open the Preferences/Settings in KLayout</li>
+<li>Navigate to <em>Application</em>→<em>Customize Menu</em></li>
+<li>Search for ‘Move’</li>
+<li>Assign the shortcut <code>M</code> to the path <code>edit_menu.mode_menu.Move_quickly</code></li>
+</ul>
+<div id="fig-move-quickly-tool-key-binding" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-move-quickly-tool-key-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/move-quickly-tool/assign-shortcut.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-move-quickly-tool-key-binding-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;7: Assign key binding
+</figcaption>
+</figure>
+</div>
 <div style="page-break-after: always;"></div>
+</section>
 </section>
 <section id="sec-pin-tool" class="level1" data-number="4">
 <h1 data-number="4"><span class="header-section-number">4</span> Pin Tool</h1>
