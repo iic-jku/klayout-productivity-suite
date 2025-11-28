@@ -349,7 +349,14 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#supported-pdks" id="toc-supported-pdks" class="nav-link" data-scroll-target="#supported-pdks"><span class="header-section-number">5.2</span> Supported PDKs</a></li>
   </ul></li>
-  <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a></li>
+  <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a>
+  <ul class="collapse">
+  <li><a href="#usage-4" id="toc-usage-4" class="nav-link" data-scroll-target="#usage-4"><span class="header-section-number">6.1</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#basics" id="toc-basics" class="nav-link" data-scroll-target="#basics"><span class="header-section-number">6.1.1</span> Basics</a></li>
+  <li><a href="#menu-commands" id="toc-menu-commands" class="nav-link" data-scroll-target="#menu-commands"><span class="header-section-number">6.1.2</span> Menu Commands</a></li>
+  </ul></li>
+  </ul></li>
   <li><a href="#sec-auto-backup" id="toc-sec-auto-backup" class="nav-link" data-scroll-target="#sec-auto-backup"><span class="header-section-number">7</span> Automatic Backups</a></li>
   </ul>
 <div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="doc.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
@@ -1054,8 +1061,82 @@ Note
 </section>
 <section id="sec-library-manager" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Library Manager</h1>
-<p>TODO</p>
+<p>Boost your layout productivity with hierarchical layouts:</p>
+<ul>
+<li>Automatically load cell libraries along with your hierarchical layout</li>
+<li>Manage loaded cell libraries</li>
+<li>Reload updated cells</li>
+<li>Export the final layout for tapeout</li>
+</ul>
+<section id="usage-4" class="level2" data-number="6.1">
+<h2 data-number="6.1" class="anchored" data-anchor-id="usage-4"><span class="header-section-number">6.1</span> Usage</h2>
+<section id="basics" class="level3" data-number="6.1.1">
+<h3 data-number="6.1.1" class="anchored" data-anchor-id="basics"><span class="header-section-number">6.1.1</span> Basics</h3>
+<ul>
+<li>Hierarchical layouts have suffix <code>*.klay</code> (and are technically OASIS files with special metadata)</li>
+<li>A library is just a Layout, with its top cells representing library cells</li>
+<li>Library maps have suffix <code>*.klib</code> (and are basically JSON files with a special schema), they can contain
+<ol type="1">
+<li>Comments</li>
+<li>Library Definition: maps a name to a library path (e.g.&nbsp;a stdcell library)</li>
+<li>Library Map Includes: reference to include another <code>*.klib</code> file (e.g.&nbsp;a set of libraries useful for the PDK)</li>
+</ol></li>
+<li><strong>NOTE:</strong> alternatively to this plugin, you could also put them in <code>~/.klayout/libraries/</code></li>
+</ul>
+</section>
+<section id="menu-commands" class="level3" data-number="6.1.2">
+<h3 data-number="6.1.2" class="anchored" data-anchor-id="menu-commands"><span class="header-section-number">6.1.2</span> Menu Commands</h3>
+<ol type="1">
+<li>In the <em>File</em> Menu, there are commands related to the library manager (<a href="#fig-library-manager-menu-commands" class="quarto-xref">Figure&nbsp;11</a>)</li>
+<li>Use <em>File</em>→<em>New Hierarchical Layout…</em> to configure a new hierarchical layout (<a href="#fig-library-manager-new-layout" class="quarto-xref">Figure&nbsp;12</a>)</li>
+<li>With a Hierarchical Layout open, use <em>File</em>→<em>Manage Cell Library Map…</em> to manage the cell libraries (<a href="#fig-library-manager-manage-cell-libraries" class="quarto-xref">Figure&nbsp;13</a>)</li>
+<li>The loaded cell libraries will appear in the Libraries Panel (<a href="#fig-library-manager-loaded-libraries" class="quarto-xref">Figure&nbsp;14</a>)</li>
+<li>With a Hierarchical Layout open, use <em>File</em>→<em>Save Hierarchical Layout [As]…</em> to save the layout.</li>
+<li>Finally, use <em>File</em>→<em>Export Layout For Tapeout…</em> to export the final layout version for tapeout.</li>
+</ol>
+<div id="fig-library-manager-menu-commands" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-library-manager-menu-commands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/library-manager/klayout-lib-manager_menu.jpg" class="img-fluid figure-img" width="400">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-library-manager-menu-commands-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;11: Menu commands related to the KLayout Library Manager
+</figcaption>
+</figure>
+</div>
+<div id="fig-library-manager-new-layout" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-library-manager-new-layout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/library-manager/klayout-lib-manager_new-layout.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-library-manager-new-layout-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;12: Create New Hierarchical Layout
+</figcaption>
+</figure>
+</div>
+<div id="fig-library-manager-manage-cell-libraries" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-library-manager-manage-cell-libraries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/library-manager/klayout-lib-manager_manage-libs.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-library-manager-manage-cell-libraries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;13: Manage Cell Libraries
+</figcaption>
+</figure>
+</div>
+<div id="fig-library-manager-loaded-libraries" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-library-manager-loaded-libraries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="figures/library-manager/klayout-lib-manager_loaded-libraries.jpg" class="img-fluid figure-img" width="500">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-library-manager-loaded-libraries-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;14: Loaded Cell Libraries
+</figcaption>
+</figure>
+</div>
 <div style="page-break-after: always;"></div>
+</section>
+</section>
 </section>
 <section id="sec-auto-backup" class="level1" data-number="7">
 <h1 data-number="7"><span class="header-section-number">7</span> Automatic Backups</h1>
