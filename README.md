@@ -16,6 +16,14 @@ Included plugins (alphabetically):
 
 For more details, see the [documentation](https://iic-jku.github.io/klayout-productivity-suite/).
 
+## Acknowledgements
+
+This project is funded by the JKU/SAL [IWS Lab](https://research.jku.at/de/projects/jku-lit-sal-intelligent-wireless-systems-lab-iws-lab/), a collaboration of [Johannes Kepler University](https://jku.at) and [Silicon Austria Labs](https://silicon-austria-labs.com).
+
+![[Johannes Kepler University: Institute for Integrated Circuits and Quantum Computing](https://iic.jku.at)](figures/funding/iic-jku.svg)
+
+![[Silicon Austria Labs](https://silicon-austria-labs.com)](figures/funding/silicon-austria-labs-logo.svg)
+
 ## Licensing
 
 Please note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0.
