@@ -16,5 +16,38 @@ limitations under the License.
 
 # Library Manager {#sec-library-manager}
 
-TODO
+Boost your layout productivity with hierarchical layouts:
 
+- Automatically load cell libraries along with your hierarchical layout
+- Manage loaded cell libraries
+- Reload updated cells
+- Export the final layout for tapeout
+
+## Usage
+
+### Basics
+
+- Hierarchical layouts have suffix `*.klay` (and are technically OASIS files with special metadata)
+- A library is just a Layout, with its top cells representing library cells
+- Library maps have suffix `*.klib` (and are basically JSON files with a special schema), they can contain
+   1. Comments
+   2. Library Definition: maps a name to a library path (e.g. a stdcell library)
+   3. Library Map Includes: reference to include another `*.klib` file (e.g. a set of libraries useful for the PDK)
+- **NOTE:** alternatively to this plugin, you could also put them in `~/.klayout/libraries/`
+
+### Menu Commands 
+
+1. In the *File* Menu, there are commands related to the library manager (@fig-library-manager-menu-commands)
+2. Use *File*→*New Hierarchical Layout…* to configure a new hierarchical layout (@fig-library-manager-new-layout)
+3. With a Hierarchical Layout open, use *File*→*Manage Cell Library Map…* to manage the cell libraries (@fig-library-manager-manage-cell-libraries)
+4. The loaded cell libraries will appear in the Libraries Panel (@fig-library-manager-loaded-libraries)
+5. With a Hierarchical Layout open, use *File*→*Save Hierarchical Layout [As]…* to save the layout.
+6. Finally, use *File*→*Export Layout For Tapeout…* to export the final layout version for tapeout.
+
+![Menu commands related to the KLayout Library Manager](figures/library-manager/klayout-lib-manager_menu.jpg){#fig-library-manager-menu-commands width=400}
+
+![Create New Hierarchical Layout](figures/library-manager/klayout-lib-manager_new-layout.jpg){#fig-library-manager-new-layout}
+
+![Manage Cell Libraries](figures/library-manager/klayout-lib-manager_manage-libs.jpg){#fig-library-manager-manage-cell-libraries}
+
+![Loaded Cell Libraries](figures/library-manager/klayout-lib-manager_loaded-libraries.jpg){#fig-library-manager-loaded-libraries width=500}
