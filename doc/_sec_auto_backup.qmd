@@ -16,5 +16,19 @@ limitations under the License.
 
 # Automatic Backups {#sec-auto-backup}
 
-TODO
+This plugin automatically creates backups
 
+   - Save your precious layout work in case of crashes or power outages
+   - Configure intervals and rotation scheme
+
+## Usage
+
+### Tool activation and deactivation
+
+Activate or deactivate the *Auto Backup* plugin by selecting *File*→*Automatic Backups*→*Enable Automatic Backups* in the main menu.
+
+![Menu File → Automatic Backups](figures/auto-backup/klayout-auto-backup-menu.jpg){#fig-auto-backup-menu width=600}
+
+Configure backup settings by clicking *File*→*Automatic Backups*→*Setup Automatic Backups* in the main menu.
+
+![Setup Automatic Backups](figures/auto-backup/klayout-auto-backup-config.jpg){#fig-auto-backup-menu width=600}
