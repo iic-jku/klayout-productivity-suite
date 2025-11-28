@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Köhler">
-<meta name="dcterms.date" content="2025-11-27">
+<meta name="dcterms.date" content="2025-11-28">
 
 <title>KLayout Productivity Suite Documentation – KLayout Productivity Suite</title>
 <style>
@@ -340,7 +340,15 @@ ul.task-list li input[type="checkbox"] {
   </ul></li>
   <li><a href="#json-tech-files-for-supported-pdks" id="toc-json-tech-files-for-supported-pdks" class="nav-link" data-scroll-target="#json-tech-files-for-supported-pdks"><span class="header-section-number">4.3</span> JSON tech files for supported PDKs</a></li>
   </ul></li>
-  <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a></li>
+  <li><a href="#sec-layer-shortcuts-plugin" id="toc-sec-layer-shortcuts-plugin" class="nav-link" data-scroll-target="#sec-layer-shortcuts-plugin"><span class="header-section-number">5</span> Layer Shortcuts Plugin</a>
+  <ul class="collapse">
+  <li><a href="#usage-3" id="toc-usage-3" class="nav-link" data-scroll-target="#usage-3"><span class="header-section-number">5.1</span> Usage</a>
+  <ul class="collapse">
+  <li><a href="#tool-activation-and-deactivation-1" id="toc-tool-activation-and-deactivation-1" class="nav-link" data-scroll-target="#tool-activation-and-deactivation-1"><span class="header-section-number">5.1.1</span> Tool activation and deactivation</a></li>
+  <li><a href="#shortcuts" id="toc-shortcuts" class="nav-link" data-scroll-target="#shortcuts"><span class="header-section-number">5.1.2</span> Shortcuts</a></li>
+  </ul></li>
+  <li><a href="#supported-pdks" id="toc-supported-pdks" class="nav-link" data-scroll-target="#supported-pdks"><span class="header-section-number">5.2</span> Supported PDKs</a></li>
+  </ul></li>
   <li><a href="#sec-library-manager" id="toc-sec-library-manager" class="nav-link" data-scroll-target="#sec-library-manager"><span class="header-section-number">6</span> Library Manager</a></li>
   <li><a href="#sec-auto-backup" id="toc-sec-auto-backup" class="nav-link" data-scroll-target="#sec-auto-backup"><span class="header-section-number">7</span> Automatic Backups</a></li>
   </ul>
@@ -378,7 +386,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">November 27, 2025</p>
+      <p class="date">November 28, 2025</p>
     </div>
   </div>
   
@@ -919,8 +927,130 @@ Note
 </section>
 <section id="sec-layer-shortcuts-plugin" class="level1" data-number="5">
 <h1 data-number="5"><span class="header-section-number">5</span> Layer Shortcuts Plugin</h1>
-<p>TODO</p>
+<p>Boost your layout productivity with shortcuts to quickly change layer visibility and selection.</p>
+<section id="usage-3" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="usage-3"><span class="header-section-number">5.1</span> Usage</h2>
+<section id="tool-activation-and-deactivation-1" class="level3" data-number="5.1.1">
+<h3 data-number="5.1.1" class="anchored" data-anchor-id="tool-activation-and-deactivation-1"><span class="header-section-number">5.1.1</span> Tool activation and deactivation</h3>
+<p>Activate or deactivate the <em>Layer Shortcuts</em> plugin by selecting <em>Tools</em>→<em>Layer Shortcut Plugin</em> in the main menu.</p>
+</section>
+<section id="shortcuts" class="level3" data-number="5.1.2">
+<h3 data-number="5.1.2" class="anchored" data-anchor-id="shortcuts"><span class="header-section-number">5.1.2</span> Shortcuts</h3>
+<p>Shortcuts can be defined as action steps in the JSON configuration file.</p>
+<p>This following table describes the shortcuts of our default IHP SG13G2 configuration.</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th>Shortcut</th>
+<th>Description (What happens)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>0</code></td>
+<td>Show default layers</td>
+</tr>
+<tr class="even">
+<td><code>,</code></td>
+<td>Hide default layers</td>
+</tr>
+<tr class="odd">
+<td><code>1</code></td>
+<td>Focus on 1st metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>2</code></td>
+<td>Focus on 2nd metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>3</code></td>
+<td>Focus on 3rd metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>4</code></td>
+<td>Focus on 4th metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>5</code></td>
+<td>Focus on 5th metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>6</code></td>
+<td>Focus on 6th metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>7</code></td>
+<td>Focus on 7th metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>8</code></td>
+<td>Focus on Gate Poly and related layers</td>
+</tr>
+<tr class="odd">
+<td><code>9</code></td>
+<td>Focus on Diffusion and related layers</td>
+</tr>
+<tr class="even">
+<td><code>Shift+1</code></td>
+<td>Extend the focus to include 1st metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>Shift+2</code></td>
+<td>Extend the focus to include 2nd metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>Shift+3</code></td>
+<td>Extend the focus to include 3rd metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>Shift+4</code></td>
+<td>Extend the focus to include 4th metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>Shift+5</code></td>
+<td>Extend the focus to include 5th metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>Shift+6</code></td>
+<td>Extend the focus to include 6th metal and related vias</td>
+</tr>
+<tr class="even">
+<td><code>Shift+7</code></td>
+<td>Extend the focus to include 7th metal and related vias</td>
+</tr>
+<tr class="odd">
+<td><code>Shift+8</code></td>
+<td>Extend the focus to include Gate Poly and related vias</td>
+</tr>
+<tr class="even">
+<td><code>Shift+9</code></td>
+<td>Extend the focus to include Diffusion and related vias</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="supported-pdks" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="supported-pdks"><span class="header-section-number">5.2</span> Supported PDKs</h2>
+<p>Currently, we support the following PDKs:</p>
+<ul>
+<li><code>IHP SG13G2</code>: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json</li>
+<li>Skywater <code>sky130</code>: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/sky130.json</li>
+<li>Global Foundries <code>gf180mcu</code>: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/gf180mcu.json</li>
+</ul>
+<p>You can add support for additional PDKs by writing a JSON configuration file:</p>
+<ul>
+<li>copy <a href="https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json">the existing JSON file</a> and ensure the PDK name is volare/ceil compatible</li>
+<li>Noters about the JSON file format
+<ul>
+<li>NOTE: Layer names must be the same as in the KLayout layer properties XML file (e.g.&nbsp;<code>~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyp</code>)</li>
+<li>NOTE: The technology name must be the same as in the KLayout technology XML file (e.g.&nbsp;<code>~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyt</code>)</li>
+<li>NOTE: The layer group names must be unique but are completely custom</li>
+</ul></li>
+<li><a href="https://github.com/iic-jku/klayout-layer-shortcuts/compare">create a pull request</a></li>
+</ul>
 <div style="page-break-after: always;"></div>
+</section>
 </section>
 <section id="sec-library-manager" class="level1" data-number="6">
 <h1 data-number="6"><span class="header-section-number">6</span> Library Manager</h1>

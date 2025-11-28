@@ -103,5 +103,19 @@
     "title": "KLayout Productivity Suite Documentation",
     "section": "4.3 JSON tech files for supported PDKs",
     "text": "4.3 JSON tech files for supported PDKs\n\nsky130.jsonihp-sg13g2.json\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNote\n\n\n\nThe JSON tech files are currently available for the PDKs:\n\nIHP SG13G2\nSkywater sky130"
+  },
+  {
+    "objectID": "doc/doc.html#usage-3",
+    "href": "doc/doc.html#usage-3",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "5.1 Usage",
+    "text": "5.1 Usage\n\n5.1.1 Tool activation and deactivation\nActivate or deactivate the Layer Shortcuts plugin by selecting Tools→Layer Shortcut Plugin in the main menu.\n\n\n5.1.2 Shortcuts\nShortcuts can be defined as action steps in the JSON configuration file.\nThis following table describes the shortcuts of our default IHP SG13G2 configuration.\n\n\n\nShortcut\nDescription (What happens)\n\n\n\n\n0\nShow default layers\n\n\n,\nHide default layers\n\n\n1\nFocus on 1st metal and related vias\n\n\n2\nFocus on 2nd metal and related vias\n\n\n3\nFocus on 3rd metal and related vias\n\n\n4\nFocus on 4th metal and related vias\n\n\n5\nFocus on 5th metal and related vias\n\n\n6\nFocus on 6th metal and related vias\n\n\n7\nFocus on 7th metal and related vias\n\n\n8\nFocus on Gate Poly and related layers\n\n\n9\nFocus on Diffusion and related layers\n\n\nShift+1\nExtend the focus to include 1st metal and related vias\n\n\nShift+2\nExtend the focus to include 2nd metal and related vias\n\n\nShift+3\nExtend the focus to include 3rd metal and related vias\n\n\nShift+4\nExtend the focus to include 4th metal and related vias\n\n\nShift+5\nExtend the focus to include 5th metal and related vias\n\n\nShift+6\nExtend the focus to include 6th metal and related vias\n\n\nShift+7\nExtend the focus to include 7th metal and related vias\n\n\nShift+8\nExtend the focus to include Gate Poly and related vias\n\n\nShift+9\nExtend the focus to include Diffusion and related vias"
+  },
+  {
+    "objectID": "doc/doc.html#supported-pdks",
+    "href": "doc/doc.html#supported-pdks",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "5.2 Supported PDKs",
+    "text": "5.2 Supported PDKs\nCurrently, we support the following PDKs:\n\nIHP SG13G2: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json\nSkywater sky130: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/sky130.json\nGlobal Foundries gf180mcu: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/gf180mcu.json\n\nYou can add support for additional PDKs by writing a JSON configuration file:\n\ncopy the existing JSON file and ensure the PDK name is volare/ceil compatible\nNoters about the JSON file format\n\nNOTE: Layer names must be the same as in the KLayout layer properties XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyp)\nNOTE: The technology name must be the same as in the KLayout technology XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyt)\nNOTE: The layer group names must be unique but are completely custom\n\ncreate a pull request"
   }
 ]
