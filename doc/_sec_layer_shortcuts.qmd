@@ -16,5 +16,57 @@ limitations under the License.
 
 # Layer Shortcuts Plugin {#sec-layer-shortcuts-plugin}
 
-TODO
+Boost your layout productivity with shortcuts to quickly change layer visibility and selection.
+
+## Usage
+
+### Tool activation and deactivation
+
+Activate or deactivate the *Layer Shortcuts* plugin by selecting *Tools*→*Layer Shortcut Plugin* in the main menu.
+
+### Shortcuts
+
+Shortcuts can be defined as action steps in the JSON configuration file.
+
+This following table describes the shortcuts of our default IHP SG13G2 configuration.
+
+| Shortcut  | Description (What happens)                               |
+|-----------|----------------------------------------------------------|
+| `0`       | Show default layers                                      |
+| `,`       | Hide default layers                                      |
+| `1`       | Focus on 1st metal and related vias                      |
+| `2`       | Focus on 2nd metal and related vias                      |
+| `3`       | Focus on 3rd metal and related vias                      |
+| `4`       | Focus on 4th metal and related vias                      |
+| `5`       | Focus on 5th metal and related vias                      |
+| `6`       | Focus on 6th metal and related vias                      |
+| `7`       | Focus on 7th metal and related vias                      |
+| `8`       | Focus on Gate Poly and related layers                    |
+| `9`       | Focus on Diffusion and related layers                    |
+| `Shift+1` | Extend the focus to include 1st metal and related vias   |
+| `Shift+2` | Extend the focus to include 2nd metal and related vias   |
+| `Shift+3` | Extend the focus to include 3rd metal and related vias   |
+| `Shift+4` | Extend the focus to include 4th metal and related vias   |
+| `Shift+5` | Extend the focus to include 5th metal and related vias   |
+| `Shift+6` | Extend the focus to include 6th metal and related vias   |
+| `Shift+7` | Extend the focus to include 7th metal and related vias   |
+| `Shift+8` | Extend the focus to include Gate Poly and related vias   |
+| `Shift+9` | Extend the focus to include Diffusion and related vias   |
+
+## Supported PDKs
+
+Currently, we support the following PDKs:
+
+   - `IHP SG13G2`: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json
+   - Skywater `sky130`: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/sky130.json
+   - Global Foundries `gf180mcu`: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/gf180mcu.json
+
+You can add support for additional PDKs by writing a JSON configuration file:
+
+- copy [the existing JSON file](https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json) and ensure the PDK name is volare/ceil compatible
+- Noters about the JSON file format
+   - NOTE: Layer names must be the same as in the KLayout layer properties XML file (e.g. `~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyp`)
+   - NOTE: The technology name must be the same as in the KLayout technology XML file (e.g. `~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyt`)
+   - NOTE: The layer group names must be unique but are completely custom
+- [create a pull request](https://github.com/iic-jku/klayout-layer-shortcuts/compare)
 
