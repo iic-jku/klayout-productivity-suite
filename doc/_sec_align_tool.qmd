@@ -40,9 +40,9 @@ If no pre-selection is made, the shape or instance of the source reference point
 
 ::: {#fig-align-tool-status-dock layout-nrow=1 layout-ncol=2}
 
-![No Preselection](figures/align-tool/dock-setup-panel-no-preselection.jpg)
+![No Preselection](figures/align-tool/dock-setup-panel-no-preselection.jpg){width=300}
 
-![With Preselection](figures/align-tool/dock-setup-panel-preselection.jpg)
+![With Preselection](figures/align-tool/dock-setup-panel-preselection.jpg){width=300}
 
 Dock Setup Panel
 :::
