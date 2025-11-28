@@ -14,7 +14,7 @@ This add-on acts as a meta-package that can be installed in KLayout's Package Ma
 
 {{< include doc/_plugin_table.qmd >}}
 
-For more details, see the [documentation](https://iic-jku.github.io/klayout-productivity-suite/).
+For more details, see the [documentation](https://iic-jku.github.io/klayout-productivity-suite/doc/doc.html).
 
 
 ## Acknowledgements
