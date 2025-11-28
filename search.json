@@ -124,5 +124,12 @@
     "title": "KLayout Productivity Suite Documentation",
     "section": "6.1 Usage",
     "text": "6.1 Usage\n\n6.1.1 Basics\n\nHierarchical layouts have suffix *.klay (and are technically OASIS files with special metadata)\nA library is just a Layout, with its top cells representing library cells\nLibrary maps have suffix *.klib (and are basically JSON files with a special schema), they can contain\n\nComments\nLibrary Definition: maps a name to a library path (e.g. a stdcell library)\nLibrary Map Includes: reference to include another *.klib file (e.g. a set of libraries useful for the PDK)\n\nNOTE: alternatively to this plugin, you could also put them in ~/.klayout/libraries/\n\n\n\n6.1.2 Menu Commands\n\nIn the File Menu, there are commands related to the library manager (Figure 11)\nUse File→New Hierarchical Layout… to configure a new hierarchical layout (Figure 12)\nWith a Hierarchical Layout open, use File→Manage Cell Library Map… to manage the cell libraries (Figure 13)\nThe loaded cell libraries will appear in the Libraries Panel (Figure 14)\nWith a Hierarchical Layout open, use File→Save Hierarchical Layout [As]… to save the layout.\nFinally, use File→Export Layout For Tapeout… to export the final layout version for tapeout.\n\n\n\n\n\n\n\nFigure 11: Menu commands related to the KLayout Library Manager\n\n\n\n\n\n\n\n\n\nFigure 12: Create New Hierarchical Layout\n\n\n\n\n\n\n\n\n\nFigure 13: Manage Cell Libraries\n\n\n\n\n\n\n\n\n\nFigure 14: Loaded Cell Libraries"
+  },
+  {
+    "objectID": "doc/doc.html#usage-5",
+    "href": "doc/doc.html#usage-5",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "7.1 Usage",
+    "text": "7.1 Usage\n\n7.1.1 Tool activation and deactivation\nActivate or deactivate the Auto Backup plugin by selecting File→Automatic Backups→Enable Automatic Backups in the main menu.\n\n\n\n\n\n\nFigure 15: Menu File → Automatic Backups\n\n\n\nConfigure backup settings by clicking File→Automatic Backups→Setup Automatic Backups in the main menu.\n\n\n\n\n\n\nFigure 16: Setup Automatic Backups"
   }
 ]
