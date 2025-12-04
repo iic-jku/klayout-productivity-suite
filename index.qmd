@@ -5,6 +5,7 @@ pagetitle: "About"
 # KLayout Productivity Suite
 
 [![Quarto Publish](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/publish-quarto-github-pages.yml/badge.svg?branch=main)](https://github.com/iic-jku/klayout-productivity-suite/actions/workflows/publish-quarto-github-pages.yml)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17822159.svg)](https://doi.org/10.5281/zenodo.17822159)
 
 **(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)**
 
