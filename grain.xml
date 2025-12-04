@@ -3,7 +3,7 @@
  <name>ProductivityPluginSuite</name>
  <token/>
  <hidden>false</hidden>
- <version>0.1</version>
+ <version>0.2</version>
  <api-version/>
  <title>Productivity Plugin Suite</title>
  <doc>Meta-Package for all IIC-JKU KLayout Plugins</doc>
@@ -16,7 +16,7 @@
  <depends>
   <name>AlignToolPlugin</name>
   <url/>
-  <version>0.20</version>
+  <version>0.21</version>
  </depends>
 
  <depends>
@@ -34,7 +34,7 @@
  <depends>
   <name>LibraryManagerPlugin</name>
   <url/>
-  <version>0.16</version>
+  <version>0.21</version>
  </depends>
 
 <depends>
