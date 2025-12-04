@@ -1,5 +1,7 @@
 # KLayout Productivity Suite
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17822159.svg)](https://doi.org/10.5281/zenodo.17822159)
+
 The *KLayout Productivity Suite* is a collection of plugins developed by the [**Department for Integrated Circuits (ICD), Johannes Kepler University (JKU)**](https://iic.jku.at) to enhance your layout design productivity.
 
 This add-on acts as a meta-package that can be installed in KLayout's Package Manager. Once installed, it automatically pulls in all the plugins as `dependencies` through the `grain.xml`.
