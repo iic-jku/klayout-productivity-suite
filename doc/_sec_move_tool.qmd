@@ -18,8 +18,8 @@ limitations under the License.
 
 Boost your layout productivity with quick moves of layout elements, such as
 
-   * cell instances
-   * shapes (e.g. polygons, boxes, paths)
+   - cell instances
+   - shapes (e.g. polygons, boxes, paths)
 
 
 ## Usage
