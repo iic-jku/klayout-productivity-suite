@@ -2,15 +2,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.27">
+<meta name="generator" content="quarto-1.9.36">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Martin Köhler">
-<meta name="dcterms.date" content="2026-03-13">
+<meta name="dcterms.date" content="2026-03-26">
 
 <title>KLayout Productivity Suite Documentation – KLayout Productivity Suite</title>
 <style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
 div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -34,19 +37,18 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <script src="../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-4d9afe2b8d18ee9fa5d0d57b5ed4214d.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-f418161beb48e0141c760e455f12af2c.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-db8412935377c476a6a34876e811a251.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark-d075c25e60777822068c2219745b13b0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../site_libs/bootstrap/bootstrap-db8412935377c476a6a34876e811a251.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-8ec1fb2740a17410fc6227cc0b93a09a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-6fba50ad7caf29492cb2a43abebf4864.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-8ec1fb2740a17410fc6227cc0b93a09a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -399,7 +401,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">March 13, 2026</p>
+      <p class="date">March 26, 2026</p>
     </div>
   </div>
   
@@ -501,7 +503,7 @@ Tip
 <section id="acknowledgements" class="level2" data-number="1.2">
 <h2 data-number="1.2" class="anchored" data-anchor-id="acknowledgements"><span class="header-section-number">1.2</span> Acknowledgements</h2>
 <p>This project is funded by the JKU/SAL <a href="https://research.jku.at/de/projects/jku-lit-sal-intelligent-wireless-systems-lab-iws-lab/">IWS Lab</a>, a collaboration of <a href="https://jku.at">Johannes Kepler University</a> and <a href="https://silicon-austria-labs.com">Silicon Austria Labs</a>.</p>
-<div class="quarto-layout-panel" data-layout-nrow="1" data-layout-ncol="2">
+<div class="quarto-layout-panel" data-layout-ncol="2" data-layout-nrow="1">
 <div class="quarto-layout-row">
 <div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: flex-start;">
 <div class="quarto-figure quarto-figure-center">
@@ -927,6 +929,312 @@ Figure&nbsp;10: Pin Placement
 </div>
 <script>
   renderJson(JSON.parse(`
+{
+    "tech_name": "sky130",
+    "layer_group_definitions": [
+        {
+            "name": "pwell.PinLayers",
+            "layers": [
+                "pwell.pin - 122/16"
+            ]
+        },
+        {
+            "name": "pwell.LabelLayers",
+            "layers": [
+                "pwell.label - 64/59"
+            ]
+        },
+        {
+            "name": "pwell.RelatedLayers",
+            "layers": [
+                "pwell.pin - 122/16",
+                "pwell.drawing - 64/44",
+                "pwell.label - 64/59",
+                "pwell.res - 64/13",
+                "pwell.cut - 64/14"
+            ]
+        },
+        {
+            "name": "nwell.PinLayers",
+            "layers": [
+                "nwell.pin - 64/16"
+            ]
+        },
+        {
+            "name": "nwell.LabelLayers",
+            "layers": [
+                "nwell.label - 64/5"
+            ]
+        },
+        {
+            "name": "nwell.RelatedLayers",
+            "layers": [
+                "nwell.pin - 64/16",
+                "nwell.drawing - 64/20",
+                "nwell.label - 64/5",
+                "nwell.net - 84/23"
+            ]
+        },
+        {
+            "name": "poly.PinLayers",
+            "layers": [
+                "poly.pin - 66/16"
+            ]
+        },
+        {
+            "name": "poly.LabelLayers",
+            "layers": [
+                "poly.label - 66/5"
+            ]
+        },
+        {
+            "name": "poly.RelatedLayers",
+            "layers": [
+                "poly.pin - 66/16",
+                "poly.drawing - 66/20",
+                "poly.label - 66/5",
+                "poly.net - 66/23",
+                "poly.boundary - 66/4"
+            ]
+        },
+        {
+            "name": "li1.PinLayers",
+            "layers": [
+                "li1.pin - 67/16"
+            ]
+        },
+        {
+            "name": "li1.LabelLayers",
+            "layers": [
+                "li1.label - 67/5"
+            ]
+        },
+        {
+            "name": "li1.RelatedLayers",
+            "layers": [
+                "li1.drawing - 67/20",
+                "li1.pin - 67/16",
+                "li1.label - 67/5",
+                "li1.res - 67/13"
+            ]
+        },
+        {
+            "name": "met1.PinLayers",
+            "layers": [
+                "met1.pin - 68/16"
+            ]
+        },
+        {
+            "name": "met1.LabelLayers",
+            "layers": [
+                "met1.label - 68/5"
+            ]
+        },
+        {
+            "name": "met1.RelatedLayers",
+            "layers": [
+                "met1.drawing - 68/20",
+                "met1.pin - 68/16",
+                "met1.label - 68/5",
+                "met1.res - 68/13"
+            ]
+        },
+        {
+            "name": "met2.PinLayers",
+            "layers": [
+                "met2.pin - 69/16"
+            ]
+        },
+        {
+            "name": "met2.LabelLayers",
+            "layers": [
+                "met2.label - 69/5"
+            ]
+        },
+        {
+            "name": "met2.RelatedLayers",
+            "layers": [
+                "met2.drawing - 69/20",
+                "met2.pin - 69/16",
+                "met2.label - 69/5",
+                "met2.res - 69/13"
+            ]
+        },
+        {
+            "name": "met3.PinLayers",
+            "layers": [
+                "met3.pin - 70/16"
+            ]
+        },
+        {
+            "name": "met3.LabelLayers",
+            "layers": [
+                "met3.label - 70/5"
+            ]
+        },
+        {
+            "name": "met3.RelatedLayers",
+            "layers": [
+                "met3.drawing - 70/20",
+                "met3.pin - 70/16",
+                "met3.label - 70/5",
+                "met3.res - 70/13"
+            ]
+        },
+        {
+            "name": "met4.PinLayers",
+            "layers": [
+                "met4.pin - 71/16"
+            ]
+        },
+        {
+            "name": "met4.LabelLayers",
+            "layers": [
+                "met4.label - 71/5"
+            ]
+        },
+        {
+            "name": "met4.RelatedLayers",
+            "layers": [
+                "met4.drawing - 71/20",
+                "met4.pin - 71/16",
+                "met4.label - 71/5",
+                "met4.res - 71/13"
+            ]
+        },
+        {
+            "name": "met5.PinLayers",
+            "layers": [
+                "met5.pin - 72/16"
+            ]
+        },
+        {
+            "name": "met5.LabelLayers",
+            "layers": [
+                "met5.label - 72/5"
+            ]
+        },
+        {
+            "name": "met5.RelatedLayers",
+            "layers": [
+                "met5.drawing - 72/20",
+                "met5.pin - 72/16",
+                "met5.label - 72/5",
+                "met5.res - 72/13"
+            ]
+        }
+    ],
+    "pin_layer_infos": [
+        {
+            "short_layer_name": "pwell",
+            "related_layers": [
+                "pwell.RelatedLayers"
+            ],
+            "pin_layers": [
+                "pwell.PinLayers"
+            ],
+            "label_layers": [
+                "pwell.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "nwell",
+            "related_layers": [
+                "nwell.RelatedLayers"
+            ],
+            "pin_layers": [
+                "nwell.PinLayers"
+            ],
+            "label_layers": [
+                "nwell.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "poly",
+            "related_layers": [
+                "poly.RelatedLayers"
+            ],
+            "pin_layers": [
+                "poly.PinLayers"
+            ],
+            "label_layers": [
+                "poly.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "li1",
+            "related_layers": [
+                "li1.RelatedLayers"
+            ],
+            "pin_layers": [
+                "li1.PinLayers"
+            ],
+            "label_layers": [
+                "li1.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "met1",
+            "related_layers": [
+                "met1.RelatedLayers"
+            ],
+            "pin_layers": [
+                "met1.PinLayers"
+            ],
+            "label_layers": [
+                "met1.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "met2",
+            "related_layers": [
+                "met2.RelatedLayers"
+            ],
+            "pin_layers": [
+                "met2.PinLayers"
+            ],
+            "label_layers": [
+                "met2.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "met3",
+            "related_layers": [
+                "met3.RelatedLayers"
+            ],
+            "pin_layers": [
+                "met3.PinLayers"
+            ],
+            "label_layers": [
+                "met3.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "met4",
+            "related_layers": [
+                "met4.RelatedLayers"
+            ],
+            "pin_layers": [
+                "met4.PinLayers"
+            ],
+            "label_layers": [
+                "met4.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "met5",
+            "related_layers": [
+                "met5.RelatedLayers"
+            ],
+            "pin_layers": [
+                "met5.PinLayers"
+            ],
+            "label_layers": [
+                "met5.LabelLayers"
+            ]
+        }
+    ]
+}
 
    `), "json-sky130-tech");
 </script>
@@ -937,7 +1245,381 @@ Figure&nbsp;10: Pin Placement
 </div>
 <script>
   renderJson(JSON.parse(`
-
+{
+    "tech_name": "sg13g2",
+    "layer_group_definitions": [
+        {
+            "name": "nBuLay.PinLayers",
+            "layers": [
+                "nBuLay.pin"
+            ]
+        },
+        {
+            "name": "nBuLay.LabelLayers",
+            "layers": [
+                "nBuLay.label"
+            ]
+        },
+        {
+            "name": "nBuLay.RelatedLayers",
+            "layers": [
+                "nBuLay.pin",
+                "nBuLay.drawing",
+                "nBuLay.label",
+                "nBuLay.net",
+                "nBuLay.boundary",
+                "nBuLay.block"
+            ]
+        },
+        {
+            "name": "NWell.PinLayers",
+            "layers": [
+                "NWell.pin"
+            ]
+        },
+        {
+            "name": "NWell.LabelLayers",
+            "layers": [
+                "NWell.label"
+            ]
+        },
+        {
+            "name": "NWell.RelatedLayers",
+            "layers": [
+                "NWell.pin",
+                "NWell.drawing",
+                "NWell.label",
+                "NWell.net",
+                "NWell.boundary"
+            ]
+        },
+        {
+            "name": "GatPoly.PinLayers",
+            "layers": [
+                "GatPoly.pin"
+            ]
+        },
+        {
+            "name": "GatPoly.LabelLayers",
+            "layers": [
+                "GatPoly.label"
+            ]
+        },
+        {
+            "name": "GatPoly.RelatedLayers",
+            "layers": [
+                "GatPoly.pin",
+                "GatPoly.drawing",
+                "GatPoly.label",
+                "GatPoly.net",
+                "GatPoly.boundary",
+                "GatPoly.nofill"
+            ]
+        },
+        {
+            "name": "Metal1.PinLayers",
+            "layers": [
+                "Metal1.pin"
+            ]
+        },
+        {
+            "name": "Metal1.LabelLayers",
+            "layers": [
+                "Metal1.text"
+            ]
+        },
+        {
+            "name": "Metal1.RelatedLayers",
+            "layers": [
+                "Metal1.drawing",
+                "Metal1.pin",
+                "Metal1.text",
+                "Metal1.label",
+                "Metal1.diffprb"
+            ]
+        },
+        {
+            "name": "Metal2.PinLayers",
+            "layers": [
+                "Metal2.pin"
+            ]
+        },
+        {
+            "name": "Metal2.LabelLayers",
+            "layers": [
+                "Metal2.text"
+            ]
+        },
+        {
+            "name": "Metal2.RelatedLayers",
+            "layers": [
+                "Metal2.drawing",
+                "Metal2.pin",
+                "Metal2.text",
+                "Metal2.label"
+            ]
+        },
+        {
+            "name": "Metal3.PinLayers",
+            "layers": [
+                "Metal3.pin"
+            ]
+        },
+        {
+            "name": "Metal3.LabelLayers",
+            "layers": [
+                "Metal3.text"
+            ]
+        },
+        {
+            "name": "Metal3.RelatedLayers",
+            "layers": [
+                "Metal3.drawing",
+                "Metal3.pin",
+                "Metal3.text",
+                "Metal3.label"
+            ]
+        },
+        {
+            "name": "Metal4.PinLayers",
+            "layers": [
+                "Metal4.pin"
+            ]
+        },
+        {
+            "name": "Metal4.LabelLayers",
+            "layers": [
+                "Metal4.text"
+            ]
+        },
+        {
+            "name": "Metal4.RelatedLayers",
+            "layers": [
+                "Metal4.drawing",
+                "Metal4.pin",
+                "Metal4.text",
+                "Metal4.label"
+            ]
+        },
+        {
+            "name": "Metal5.PinLayers",
+            "layers": [
+                "Metal5.pin"
+            ]
+        },
+        {
+            "name": "Metal5.LabelLayers",
+            "layers": [
+                "Metal5.text"
+            ]
+        },
+        {
+            "name": "Metal5.RelatedLayers",
+            "layers": [
+                "Metal5.drawing",
+                "Metal5.pin",
+                "Metal5.text",
+                "Metal5.label"
+            ]
+        },
+        {
+            "name": "TopMetal1.PinLayers",
+            "layers": [
+                "TopMetal1.pin"
+            ]
+        },
+        {
+            "name": "TopMetal1.LabelLayers",
+            "layers": [
+                "TopMetal1.text"
+            ]
+        },
+        {
+            "name": "TopMetal1.RelatedLayers",
+            "layers": [
+                "TopMetal1.drawing",
+                "TopMetal1.pin",
+                "TopMetal1.text",
+                "TopMetal1.label"
+            ]
+        },
+        {
+            "name": "TopMetal2.PinLayers",
+            "layers": [
+                "TopMetal2.pin"
+            ]
+        },
+        {
+            "name": "TopMetal2.LabelLayers",
+            "layers": [
+                "TopMetal2.text"
+            ]
+        },
+        {
+            "name": "TopMetal2.RelatedLayers",
+            "layers": [
+                "TopMetal2.drawing",
+                "TopMetal2.pin",
+                "TopMetal2.text",
+                "TopMetal2.label"
+            ]
+        },
+        {
+            "name": "IND.PinLayers",
+            "layers": [
+                "IND.pin"
+            ]
+        },
+        {
+            "name": "IND.LabelLayers",
+            "layers": [
+                "IND.text"
+            ]
+        },
+        {
+            "name": "IND.RelatedLayers",
+            "layers": [
+                "IND.pin",
+                "IND.drawing",
+                "IND.text"
+            ]
+        }
+    ],
+    "pin_layer_infos": [
+        {
+            "short_layer_name": "nBuLay",
+            "related_layers": [
+                "nBuLay.RelatedLayers"
+            ],
+            "pin_layers": [
+                "nBuLay.PinLayers"
+            ],
+            "label_layers": [
+                "nBuLay.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "NWell",
+            "related_layers": [
+                "NWell.RelatedLayers"
+            ],
+            "pin_layers": [
+                "NWell.PinLayers"
+            ],
+            "label_layers": [
+                "NWell.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "GatPoly",
+            "related_layers": [
+                "GatPoly.RelatedLayers"
+            ],
+            "pin_layers": [
+                "GatPoly.PinLayers"
+            ],
+            "label_layers": [
+                "GatPoly.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "Metal1",
+            "related_layers": [
+                "Metal1.RelatedLayers"
+            ],
+            "pin_layers": [
+                "Metal1.PinLayers"
+            ],
+            "label_layers": [
+                "Metal1.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "Metal2",
+            "related_layers": [
+                "Metal2.RelatedLayers"
+            ],
+            "pin_layers": [
+                "Metal2.PinLayers"
+            ],
+            "label_layers": [
+                "Metal2.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "Metal3",
+            "related_layers": [
+                "Metal3.RelatedLayers"
+            ],
+            "pin_layers": [
+                "Metal3.PinLayers"
+            ],
+            "label_layers": [
+                "Metal3.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "Metal4",
+            "related_layers": [
+                "Metal4.RelatedLayers"
+            ],
+            "pin_layers": [
+                "Metal4.PinLayers"
+            ],
+            "label_layers": [
+                "Metal4.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "Metal5",
+            "related_layers": [
+                "Metal5.RelatedLayers"
+            ],
+            "pin_layers": [
+                "Metal5.PinLayers"
+            ],
+            "label_layers": [
+                "Metal5.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "TopMetal1",
+            "related_layers": [
+                "TopMetal1.RelatedLayers"
+            ],
+            "pin_layers": [
+                "TopMetal1.PinLayers"
+            ],
+            "label_layers": [
+                "TopMetal1.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "TopMetal2",
+            "related_layers": [
+                "TopMetal2.RelatedLayers"
+            ],
+            "pin_layers": [
+                "TopMetal2.PinLayers"
+            ],
+            "label_layers": [
+                "TopMetal2.LabelLayers"
+            ]
+        },
+        {
+            "short_layer_name": "IND",
+            "related_layers": [
+                "IND.RelatedLayers"
+            ],
+            "pin_layers": [
+                "IND.PinLayers"
+            ],
+            "label_layers": [
+                "IND.LabelLayers"
+            ]
+        }
+    ]
+}
    `), "json-ihp-sg13g2-tech");
 </script>
 </div>
@@ -1212,14 +1894,14 @@ Figure&nbsp;16: Setup Automatic Backups
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-reuse"><h2 class="anchored quarto-appendix-heading">Reuse</h2><div class="quarto-appendix-contents"><div>Apache-2.0 license</div></div></section><section class="quarto-appendix-contents" id="quarto-citation"><h2 class="anchored quarto-appendix-heading">Citation</h2><div><div class="quarto-appendix-secondary-label">BibTeX citation:</div><pre class="sourceCode code-with-copy quarto-appendix-bibtex"><code class="sourceCode bibtex">@online{köhler2026,
   author = {Köhler, Martin},
   title = {KLayout {Productivity} {Suite} {Documentation}},
-  date = {2026-03-13},
+  date = {2026-03-26},
   url = {https://iic-jku.github.io/klayout-productivity-suite},
   doi = {10.5281/zenodo.17822159},
   langid = {en-US}
 }
 </code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre><div class="quarto-appendix-secondary-label">For attribution, please cite this work as:</div><div id="ref-köhler2026" class="csl-entry quarto-appendix-citeas" role="listitem">
 Köhler, Martin. 2026. <span>“KLayout Productivity Suite
-Documentation.”</span> March 13, 2026. <a href="https://doi.org/10.5281/zenodo.17822159">https://doi.org/10.5281/zenodo.17822159</a>.
+Documentation.”</span> March 26. <a href="https://doi.org/10.5281/zenodo.17822159">https://doi.org/10.5281/zenodo.17822159</a>.
 </div></div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
