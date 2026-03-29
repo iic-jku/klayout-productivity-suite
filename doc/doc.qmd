@@ -96,4 +96,4 @@ bibliography: ../references.bib
 
 {{< pagebreak >}}
 
-
+{{< include _sec_vector_file_export.qmd >}}
