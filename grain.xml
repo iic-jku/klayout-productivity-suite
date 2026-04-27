@@ -3,7 +3,7 @@
  <name>ProductivityPluginSuite</name>
  <token/>
  <hidden>false</hidden>
- <version>1.0.1</version>
+ <version>1.0.2</version>
  <api-version/>
  <title>Productivity Plugin Suite</title>
  <doc>Meta-Package for all IIC-JKU KLayout Plugins</doc>
@@ -16,7 +16,7 @@
  <depends>
   <name>AlignToolPlugin</name>
   <url/>
-  <version>0.22</version>
+  <version>0.23</version>
  </depends>
 
  <depends>
@@ -40,19 +40,19 @@
 <depends>
   <name>MoveQuicklyToolPlugin</name>
   <url/>
-  <version>0.20</version> 
+  <version>0.22</version> 
  </depends>
 
 <depends>
   <name>PinToolPlugin</name>
   <url/>
-  <version>0.4</version>
+  <version>0.5</version>
  </depends>
 
 <depends>
   <name>VectorFileExportPlugin</name>
   <url/>
-  <version>0.1</version>
+  <version>0.12</version>
  </depends>
 
  <authored-time/>

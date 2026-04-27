@@ -87,7 +87,7 @@ there is a nice use case combination with the *Layer Shortcuts Plugin*:
 
 <script>
   renderJson(JSON.parse(`
-{{file:data/pin-tool/sky130.json}}
+{{file:../data/pin-tool/sky130.json}}
    `), "json-sky130-tech");
 </script>
 
@@ -100,7 +100,7 @@ there is a nice use case combination with the *Layer Shortcuts Plugin*:
 
 <script>
   renderJson(JSON.parse(`
-{{file:data/pin-tool/ihp-sg13g2.json}}
+{{file:../data/pin-tool/ihp-sg13g2.json}}
    `), "json-ihp-sg13g2-tech");
 </script>
 
