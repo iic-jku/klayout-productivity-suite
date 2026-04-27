@@ -17,9 +17,9 @@ See the License for the specific language governing permissions and
 limitations under the License.
 :::
 
-# Vector File Export (PDF, SVG) {#sec-vector-file-export}
+# Vector File Export GUI (PDF, SVG) {#sec-vector-file-export}
 
-Export the layout data to a vector graphics file in SVG or PDF format.
+Export the layout to a vector graphics file in SVG or PDF format.
 
 - precise scaling factor
 - choose which layers to include
@@ -33,6 +33,40 @@ The plugin allows for the following export modes:
 - SVG
     - only single page
 
-## Usage
+## Usage  
 After installation, the export dialog can be accessed through *File*→*Export Vector File…*
 ![Vector File Export](figures/vector-file-export/klayout-vector-file-export-screenshot.jpg){#fig-vector-file-export}
+
+### Page Format   
+The plugin allows for a multitude of page formats, including most paper formats, in portrait or landscape orientation.
+
+### Scaling   
+The scaling factor can be set to a factor that scales the absolute size of the bounding box of the layout (so 1 sets the output size to the actual size of the layout) or to a custom figure size in mm that keeps the aspect ratio of the layout. 
+
+### Formatting   
+Allows the user to choose the output colors (Black & White, Grayscale or Color), the selection of the used font and the font size in absolute or relative.
+
+### Text and Layer selection
+Allows the inclusion or exclusion of text layers (eg None, Only of Top Cell, All or all Visible) or a custom comma or blank seperated list of the text layers to include.
+Allows the inclusion or exlusion of the layout layers (eg None, All Visible, All) or a custom comma or blank seperated list in the usual layer notation (eg Metal1.drawing (8/0)).
+
+The save runset button allows to save the current settings for later use or for debugging or GitHub Issues.
+
+
+# Vector File Export CLI (PDF, SVG)
+
+Export the layout data to a vector graphics file in SVG or PDF format using a command-line interface. Requires the main klayout plugin to work
+
+## Installation  
+For first installation use: `pip3 install klayout-vector-file-export-cli` and for updating use: `pip3 install --upgrade klayout-vector-file-export-cli`.
+
+Running `klayout-vector-export --version` should now report the latest version.
+After that, you should be able to run `klayout-vector-export --help` and view the different configuration possibilities. 
+
+## Usage
+
+The plugin needs to know the input files and the output files, as well as the used technology. If no format is specified PDF is assumed and if no file ending is specified in the output file a PDF file with no file ending is generated. Default page format is A4 with 120mm Figure width and default colors are Black & White.
+
+So an example could look lile `klayout-vector-export --in ./layout.gds --out ./layout.pdf --tech sg13g2`.  This will take the layout `layout.gds` in the technology `sg13g2` and output all layers and all text layers into the pdf file `layout.pdf`.
+
+Most of the settings are the same as in the GUI, apart from the visible texts and layers as the CLI does not have that data from klayout.
