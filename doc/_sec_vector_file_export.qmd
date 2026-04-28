@@ -65,7 +65,7 @@ After that, you should be able to run `klayout-vector-export --help` and view th
 
 ## Usage
 
-The plugin needs to know the input files and the output files, as well as the used technology. If no format is specified PDF is assumed and if no file ending is specified in the output file a PDF file with no file ending is generated. Default page format is A4 with 120mm Figure width and default colors are Black & White.
+The plugin needs to know the input files and the output files, as well as the used technology. If no format is specified, PDF is assumed and if no file ending is specified in the output file, a PDF file with no file ending is generated. Default page format is `A4` with `120mm` Figure width and default colors are *Black & White*.
 
 So an example could look like 
 ```bash
