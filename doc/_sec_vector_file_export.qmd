@@ -48,7 +48,7 @@ Allows the user to choose the output colors (Black & White, Grayscale or Color),
 
 ### Text and Layer selection
 Allows the inclusion or exclusion of text layers (eg None, Only of Top Cell, All or all Visible) or a custom comma or blank seperated list of the text layers to include.
-Allows the inclusion or exlusion of the layout layers (eg None, All Visible, All) or a custom comma or blank seperated list in the usual layer notation (eg Metal1.drawing (8/0)).
+Allows the inclusion or exlusion of the layout layers (*None*, *All Visible*, *All*) or a custom comma or blank seperated list in the usual layer notation (e.g. `Metal1.drawing (8/0)`).
 
 The *Save Runset* button allows to save the current settings for later use or for debugging or GitHub Issues.
 
