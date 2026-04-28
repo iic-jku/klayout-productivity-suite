@@ -1,5 +1,26 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "KLayout Productivity Suite",
+    "section": "",
+    "text": "(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)\nThe KLayout Productivity Suite is a collection of plugins developed by the Department for Integrated Circuits (ICD), Johannes Kepler University (JKU) to enhance your layout design productivity.\nThis add-on acts as a meta-package that can be installed in KLayout’s Package Manager. Once installed, it automatically pulls in all the plugins as dependencies through the grain.xml.\nThe available plugins are listed in the table below.\n\n\n\n\nTitle\nDescription\nRepository URL\n\n\n\n\nAlign Tool Plugin\nTool to align layout objects\nhttps://github.com/iic-jku/klayout-align-tool\n\n\nAutomatic Backups\nCreate automatic backups of edited layouts\nhttps://github.com/iic-jku/klayout-auto-backup\n\n\nLayer Shortcuts Plugin\nShortcuts to quickly change layer visibility\nhttps://github.com/iic-jku/klayout-layer-shortcuts\n\n\nLibrary Manager Plugin\nLibrary manager for hierarchical layouts\nhttps://github.com/iic-jku/klayout-library-manager\n\n\nMove Quickly Tool Plugin\nTool to quickly move layout objects\nhttps://github.com/iic-jku/klayout-move-tool\n\n\nPin Tool Plugin\nEfficient placement of pins\nhttps://github.com/iic-jku/klayout-pin-tool\n\n\nPlugin Utilities Library\nUtility library used by various IIC KLayout plugins\nhttps://github.com/iic-jku/klayout-plugin-utils\n\n\nVector File Export Plugin\nPlugin to export layouts as vector files (PDF, SVG)\nhttps://github.com/iic-jku/klayout-vector-file-export\n\n\n\nFor more details, see the documentation.\n\n\nThis project is funded by the JKU/SAL IWS Lab, a collaboration of Johannes Kepler University and Silicon Austria Labs.\n\n\n\n\n\n\nJohannes Kepler University: Institute for Integrated Circuits and Quantum Computing\n\n\n\n\n\n\n\nSilicon Austria Labs\n\n\n\n\n\n\n\n\nPlease note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0."
+  },
+  {
+    "objectID": "index.html#acknowledgements",
+    "href": "index.html#acknowledgements",
+    "title": "KLayout Productivity Suite",
+    "section": "",
+    "text": "This project is funded by the JKU/SAL IWS Lab, a collaboration of Johannes Kepler University and Silicon Austria Labs.\n\n\n\n\n\n\nJohannes Kepler University: Institute for Integrated Circuits and Quantum Computing\n\n\n\n\n\n\n\nSilicon Austria Labs"
+  },
+  {
+    "objectID": "index.html#licensing",
+    "href": "index.html#licensing",
+    "title": "KLayout Productivity Suite",
+    "section": "",
+    "text": "Please note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0."
+  },
+  {
     "objectID": "doc/doc.html",
     "href": "doc/doc.html",
     "title": "KLayout Productivity Suite Documentation",
@@ -95,7 +116,7 @@
     "href": "doc/doc.html#supported-pdks",
     "title": "KLayout Productivity Suite Documentation",
     "section": "5.2 Supported PDKs",
-    "text": "5.2 Supported PDKs\nCurrently, we support the following PDKs:\n\nIHP SG13G2: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json\nSkywater sky130: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/sky130.json\nGlobal Foundries gf180mcu: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/gf180mcu.json\n\nYou can add support for additional PDKs by writing a JSON configuration file:\n\ncopy the existing JSON file and ensure the PDK name is volare/ceil compatible\nNoters about the JSON file format\n\nNOTE: Layer names must be the same as in the KLayout layer properties XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyp)\nNOTE: The technology name must be the same as in the KLayout technology XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyt)\nNOTE: The layer group names must be unique but are completely custom\n\ncreate a pull request"
+    "text": "5.2 Supported PDKs\nCurrently, we support the following PDKs:\n\nIHP SG13G2: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13g2.json\nIHP SG13CMOS5L: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/ihp-sg13cmos5l.json\nSkywater sky130: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/sky130.json\nGlobal Foundries gf180mcu: https://github.com/iic-jku/klayout-layer-shortcuts/blob/main/pdks/gf180mcu.json\n\nYou can add support for additional PDKs by writing a JSON configuration file:\n\ncopy the existing JSON file and ensure the PDK name is volare/ceil compatible\nNoters about the JSON file format\n\nNOTE: Layer names must be the same as in the KLayout layer properties XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyp)\nNOTE: The technology name must be the same as in the KLayout technology XML file (e.g. ~/.volare/ihp-sg13g2/libs.tech/klayout/tech/sg13g2.lyt)\nNOTE: The layer group names must be unique but are completely custom\n\ncreate a pull request"
   },
   {
     "objectID": "doc/doc.html#usage-4",
@@ -112,24 +133,24 @@
     "text": "7.1 Usage\n\n7.1.1 Tool activation and deactivation\nActivate or deactivate the Auto Backup plugin by selecting File→Automatic Backups→Enable Automatic Backups in the main menu.\n\n\n\n\n\n\nFigure 15: Menu File → Automatic Backups\n\n\n\nConfigure backup settings by clicking File→Automatic Backups→Setup Automatic Backups in the main menu.\n\n\n\n\n\n\nFigure 16: Setup Automatic Backups"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "KLayout Productivity Suite",
-    "section": "",
-    "text": "(c) 2025 Martin Köhler, Patrick Fath and co-authors, Department for Integrated Circuits (ICD), Johannes Kepler University, Linz (JKU)\nThe KLayout Productivity Suite is a collection of plugins developed by the Department for Integrated Circuits (ICD), Johannes Kepler University (JKU) to enhance your layout design productivity.\nThis add-on acts as a meta-package that can be installed in KLayout’s Package Manager. Once installed, it automatically pulls in all the plugins as dependencies through the grain.xml.\nThe available plugins are listed in the table below.\n\n\n\n\nTitle\nDescription\nRepository URL\n\n\n\n\nAlign Tool Plugin\nTool to align layout objects\nhttps://github.com/iic-jku/klayout-align-tool\n\n\nAutomatic Backups\nCreate automatic backups of edited layouts\nhttps://github.com/iic-jku/klayout-auto-backup\n\n\nLayer Shortcuts Plugin\nShortcuts to quickly change layer visibility\nhttps://github.com/iic-jku/klayout-layer-shortcuts\n\n\nLibrary Manager Plugin\nLibrary manager for hierarchical layouts\nhttps://github.com/iic-jku/klayout-library-manager\n\n\nMove Quickly Tool Plugin\nTool to quickly move layout objects\nhttps://github.com/iic-jku/klayout-move-tool\n\n\nPin Tool Plugin\nEfficient placement of pins\nhttps://github.com/iic-jku/klayout-pin-tool\n\n\nPlugin Utilities Library\nUtility library used by various IIC KLayout plugins\nhttps://github.com/iic-jku/klayout-plugin-utils\n\n\nVector File Export Plugin\nPlugin to export layouts as vector files (PDF, SVG)\nhttps://github.com/iic-jku/klayout-vector-file-export\n\n\n\nFor more details, see the documentation.\n\n\nThis project is funded by the JKU/SAL IWS Lab, a collaboration of Johannes Kepler University and Silicon Austria Labs.\n\n\n\n\n\n\nJohannes Kepler University: Institute for Integrated Circuits and Quantum Computing\n\n\n\n\n\n\n\nSilicon Austria Labs\n\n\n\n\n\n\n\n\nPlease note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0."
+    "objectID": "doc/doc.html#usage-6",
+    "href": "doc/doc.html#usage-6",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "8.1 Usage",
+    "text": "8.1 Usage\nAfter installation, the export dialog can be accessed through File→Export Vector File… \n\n8.1.1 Page Format\nThe plugin allows for a multitude of page formats, including most paper formats, in portrait or landscape orientation.\n\n\n8.1.2 Scaling\nThe scaling factor can be set to a factor that scales the absolute size of the bounding box of the layout (so 1 sets the output size to the actual size of the layout) or to a custom figure size in mm that keeps the aspect ratio of the layout.\n\n\n8.1.3 Formatting\nAllows the user to choose the output colors (Black & White, Greyscale or Color), the selection of the used font and the font size in absolute or relative.\n\n\n8.1.4 Text and Layer selection\nAllows the inclusion or exclusion of text layers (None, Only of Top Cell, All or All Visible) or a custom comma or blank seperated list of the text layers to include. Allows the inclusion or exlusion of the layout layers (None, All Visible, All*) or a custom comma or blank seperated list in the usual layer notation (e.g. Metal1.drawing (8/0)).\nThe Save Runset button allows to save the current settings for later use or for debugging or GitHub Issues."
   },
   {
-    "objectID": "index.html#acknowledgements",
-    "href": "index.html#acknowledgements",
-    "title": "KLayout Productivity Suite",
-    "section": "",
-    "text": "This project is funded by the JKU/SAL IWS Lab, a collaboration of Johannes Kepler University and Silicon Austria Labs.\n\n\n\n\n\n\nJohannes Kepler University: Institute for Integrated Circuits and Quantum Computing\n\n\n\n\n\n\n\nSilicon Austria Labs"
+    "objectID": "doc/doc.html#installation",
+    "href": "doc/doc.html#installation",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "9.1 Installation",
+    "text": "9.1 Installation\nFor first installation use: pip3 install klayout-vector-file-export-cli and for updating use: pip3 install --upgrade klayout-vector-file-export-cli.\nRunning klayout-vector-export --version should now report the latest version. After that, you should be able to run klayout-vector-export --help and view the different configuration possibilities."
   },
   {
-    "objectID": "index.html#licensing",
-    "href": "index.html#licensing",
-    "title": "KLayout Productivity Suite",
-    "section": "",
-    "text": "Please note that the documentation is licensed under Apache 2.0 License, while the plugins themselves are published under the GNU General Public License 3.0."
+    "objectID": "doc/doc.html#usage-7",
+    "href": "doc/doc.html#usage-7",
+    "title": "KLayout Productivity Suite Documentation",
+    "section": "9.2 Usage",
+    "text": "9.2 Usage\nThe plugin needs to know the input files and the output files, as well as the used technology. If no format is specified, PDF is assumed and if no file ending is specified in the output file, a PDF file with no file ending is generated. Default page format is A4 with 120mm Figure width and default colors are Black & White.\nSo an example could look like\nklayout-vector-export --in ./layout.gds --out ./layout.pdf --tech sg13g2\nMost of the settings are the same as in the GUI, apart from the visible texts and layers as the CLI does not have that data from klayout."
   }
 ]
