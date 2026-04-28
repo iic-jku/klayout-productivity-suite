@@ -1,0 +1,74 @@
+---
+filters: ["inline-file-filter.lua"]
+---
+::: {.content-hidden}
+Copyright (C) 2025 Martin Köhler and co-authors (martin.koehler@jku.at)
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+:::
+
+# Vector File Export GUI (PDF, SVG) {#sec-vector-file-export}
+
+Export the layout to a vector graphics file in SVG or PDF format.
+
+- precise scaling factor
+- choose which layers to include
+- choose which text layers to include 
+
+The plugin allows for the following export modes:
+
+- PDF
+    - single page (everything on one page)
+    - layer per page (breaks every layer into a seperate page)
+- SVG
+    - only single page
+
+## Usage  
+After installation, the export dialog can be accessed through *File*→*Export Vector File…*
+![Vector File Export](figures/vector-file-export/klayout-vector-file-export-screenshot.jpg){#fig-vector-file-export}
+
+### Page Format   
+The plugin allows for a multitude of page formats, including most paper formats, in portrait or landscape orientation.
+
+### Scaling   
+The scaling factor can be set to a factor that scales the absolute size of the bounding box of the layout (so 1 sets the output size to the actual size of the layout) or to a custom figure size in mm that keeps the aspect ratio of the layout. 
+
+### Formatting   
+Allows the user to choose the output colors (*Black & White*, *Greyscale* or *Color*), the selection of the used font and the font size in absolute or relative.
+
+### Text and Layer selection
+Allows the inclusion or exclusion of text layers (*None*, *Only of Top Cell*, *All or *All Visible*) or a custom comma or blank seperated list of the text layers to include.
+Allows the inclusion or exlusion of the layout layers (*None*, *All Visible*, *All*) or a custom comma or blank seperated list in the usual layer notation (e.g. `Metal1.drawing (8/0)`).
+
+The *Save Runset* button allows to save the current settings for later use or for debugging or GitHub Issues.
+
+
+# Vector File Export CLI (PDF, SVG)
+
+Export the layout data to a vector graphics file in SVG or PDF format using a command-line interface. Requires the main klayout plugin to work.
+
+## Installation  
+For first installation use: `pip3 install klayout-vector-file-export-cli` and for updating use: `pip3 install --upgrade klayout-vector-file-export-cli`.
+
+Running `klayout-vector-export --version` should now report the latest version.
+After that, you should be able to run `klayout-vector-export --help` and view the different configuration possibilities. 
+
+## Usage
+
+The plugin needs to know the input files and the output files, as well as the used technology. If no format is specified, PDF is assumed and if no file ending is specified in the output file, a PDF file with no file ending is generated. Default page format is `A4` with `120mm` Figure width and default colors are *Black & White*.
+
+So an example could look like 
+```bash
+klayout-vector-export --in ./layout.gds --out ./layout.pdf --tech sg13g2
+```
+Most of the settings are the same as in the GUI, apart from the visible texts and layers as the CLI does not have that data from klayout.
